@@ -1,0 +1,21 @@
+.catalog-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 30px;
+}
+
+.catalog-search input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.catalog-search button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
