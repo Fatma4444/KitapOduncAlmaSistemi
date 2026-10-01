@@ -1,0 +1,74 @@
+.general-information {
+    width: calc(100% - 24px);
+    height: 63px;
+
+    margin: 40px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: #592706;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+    color: white;
+}
+
+
+/* Her bilgi alanı */
+.total-book,
+.member,
+.on-loan,
+.shelf {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+/* İkonlar */
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+/* Sayı ve açıklama */
+.information {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 11px;
+}
+
+
+/* Sayılar */
+.information strong {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* Açıklamalar */
+.information span {
+    font-size: 7px;
+    font-weight: 400;
+
+    color: #ffffff;
+}
+
+.total-book,
+.member,
+.on-loan {
+    border-right: 3px solid rgba(255, 255, 255, 0.6);
+    padding-right: 14px;
+}

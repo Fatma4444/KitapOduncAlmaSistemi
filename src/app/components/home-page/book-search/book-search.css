@@ -1,0 +1,134 @@
+.banner {
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+/* Banner fotoğrafı */
+.picture {
+    width: 100%;
+    height: 220px;
+
+    position: relative;
+
+    background-image: url('/images/bingol-kutuphane.jpg');
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+.picture::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.40);
+}
+
+/* Yazılar */
+.writing {
+    position: relative;
+    z-index: 1;
+
+    padding: 18px;
+
+    color: white;
+
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hi {
+    margin: 8px;
+
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.fareword {
+    margin-top: 6px;
+    margin-bottom: 0;
+
+    font-size: 9px;
+    font-weight: 400;
+
+    color: white;
+}
+
+
+/* ARAMA ÇUBUĞU */
+.search {
+    width: calc(100% - 20px);
+    height: 38px;
+
+    margin: -65px auto 0;
+
+    position: relative;
+    z-index: 2;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5px 0 12px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Büyüteç */
+.search-icon {
+    font-size: 20px;
+    color: #999;
+    margin-right: 5px;
+}
+
+
+/* Input */
+.search input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    font-size: 11px;
+
+    color: #555;
+
+    background: transparent;
+}
+
+.search input::placeholder {
+    color: #999;
+}
+
+
+/* Arama butonu */
+.search-button {
+    width: 29px;
+    height: 29px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #8f1025;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
