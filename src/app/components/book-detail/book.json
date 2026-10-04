@@ -1,0 +1,59 @@
+{
+  "id": 1,
+  "title": "Makine Öğrenmesi",
+   "coverImage": "images/images.jpg",
+  "authors": [
+    "Dr. Elif Kaya",
+    "Dr. Mehmet Demir"
+  ],
+  "year": 2021,
+  "language": "Türkçe",
+  "edition": "4. Baskı",
+  "isbn": "978-605-123-456-7",
+  "publisher": "Bingöl Üniversitesi Yayınları",
+  "category": "Bilgisayar Mühendisliği > Yapay Zeka",
+  "pageCount": 612,
+  "coverImage": "assets/books/makine-ogrenmesi.jpg",
+
+  "availability": {
+    "totalBranches": 2,
+    "available": true,
+    "availableCount": 2
+  },
+
+  "locations": [
+    {
+      "library": "Mühendislik Fakültesi",
+      "locationType": "Fakülte Kütüphanesi",
+      "status": "Rafta Var",
+      "floor": "1. Kat",
+      "shelf": "B3",
+      "available": true,
+      "quantity": 1
+    },
+    {
+      "library": "Merkez Kütüphane",
+      "locationType": "Merkez Kütüphane",
+      "status": "Ödünçte",
+      "returnDate": "2026-10-15",
+      "floor": "Zemin Kat",
+      "section": "Bilim Salonu",
+      "shelf": "A1-12",
+      "available": false,
+      "quantity": 0
+    }
+  ],
+
+  "description": "Bu kitap, makine öğrenmesine giriş yapmak isteyen öğrenciler ve araştırmacılar için temel kavramları, yöntemleri ve güncel uygulamaları ele almaktadır.",
+
+  "details": {
+    "isbn": "978-605-123-456-7",
+    "subject": "Bilgisayar Mühendisliği > Yapay Zeka",
+    "pageCount": 612,
+    "publisher": "Bingöl Üniversitesi Yayınları"
+  },
+
+  "contents": [],
+
+  "similarBooks": []
+}
