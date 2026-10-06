@@ -1,7 +1,14 @@
 <app-catalog-header></app-catalog-header>
 
-<app-catalog-search></app-catalog-search>
+<app-catalog-search
+  (arama)="aramaYap($event)">
+</app-catalog-search>
 
-<app-category-tabs></app-category-tabs>
+<app-category-tabs
+  (kategori)="kategoriSec($event)">
+</app-category-tabs>
 
-<app-catalog-list></app-catalog-list>
+<app-catalog-list
+  [aramaMetni]="aramaMetni"
+  [kategori]="kategori">
+</app-catalog-list>

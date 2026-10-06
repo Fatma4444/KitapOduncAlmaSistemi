@@ -1,0 +1,27 @@
+<div class="catalog-list">
+
+  <div class="list-header">
+    <span>{{ filtrelenmisKitaplar.length }} sonuç bulundu</span>
+
+  <select (change)="siralamayiDegistir($event)">
+   <option value="onerilen">Önerilen</option>
+   <option value="yeni">Yeni Eklenenler</option>
+   <option value="alfabetik">Alfabetik</option>
+  </select>
+  </div>
+
+  @for (kitap of filtrelenmisKitaplar; track kitap.kitapAdi) {
+
+    <app-book-card
+      [kitapAdi]="kitap.kitapAdi"
+      [yazar]="kitap.yazar"
+      [basimYili]="kitap.basimYili"
+      [dil]="kitap.dil"
+      [raftaMi]="kitap.raftaMi"
+      [fakulte]="kitap.fakulte"
+      [kitapFoto]="kitap.kitapFoto">
+    </app-book-card>
+
+  }
+
+</div>

@@ -1,0 +1,33 @@
+<div class="category-tabs">
+
+  <button
+    [class.active]="seciliKategori === 'Tümü'"
+    (click)="kategoriSec('Tümü')">
+    Tümü
+  </button>
+
+  <button
+    [class.active]="seciliKategori === 'Kitap'"
+    (click)="kategoriSec('Kitap')">
+    Kitap
+  </button>
+
+  <button
+    [class.active]="seciliKategori === 'E-Kitap'"
+    (click)="kategoriSec('E-Kitap')">
+    E-Kitap
+  </button>
+
+  <button
+    [class.active]="seciliKategori === 'Tez'"
+    (click)="kategoriSec('Tez')">
+    Tez
+  </button>
+
+  <button
+    [class.active]="seciliKategori === 'Makale'"
+    (click)="kategoriSec('Makale')">
+    Makale
+  </button>
+
+</div>

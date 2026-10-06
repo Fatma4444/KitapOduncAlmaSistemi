@@ -1,0 +1,66 @@
+.catalog-search {
+  padding: 0 6px;
+}
+
+/* Arama kutusu */
+.search-box {
+  display: flex;
+  align-items: center;
+
+  height: 44px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+
+  padding: 0 8px;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* Arama ikonu */
+.search-icon {
+  font-size: 20px;
+  color: #999;
+
+  margin: 0 8px 0 4px;
+}
+
+/* Input */
+.search-box input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  font-size: 13px;
+  color: #333;
+
+  background: transparent;
+}
+
+.search-box input::placeholder {
+  color: #aaa;
+}
+
+/* Arama butonu */
+.search-box button {
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: #f4f4f4;
+
+  color: #9b0034;
+
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.search-box button:hover {
+  background-color: #f3e6eb;
+}
