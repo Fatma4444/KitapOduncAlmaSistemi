@@ -6,7 +6,7 @@ import { Orientation } from './orientation/orientation';
 import { BookDescription } from './book-description/book-description';
 
 import kitap from './book.json';
-import { Footer } from '../footer/footer';
+import { Footer } from '../common_component/footer/footer';
 
 @Component({
   selector: 'app-book-detail',
