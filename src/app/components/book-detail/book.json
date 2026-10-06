@@ -1,11 +1,12 @@
 {
   "id": 1,
   "title": "Makine Öğrenmesi",
-   "coverImage": "images/images.jpg",
+  "coverImage": "/images/images.jpg",
   "authors": [
     "Dr. Elif Kaya",
     "Dr. Mehmet Demir"
   ],
+
   "year": 2021,
   "language": "Türkçe",
   "edition": "4. Baskı",
@@ -13,7 +14,6 @@
   "publisher": "Bingöl Üniversitesi Yayınları",
   "category": "Bilgisayar Mühendisliği > Yapay Zeka",
   "pageCount": 612,
-  "coverImage": "assets/books/makine-ogrenmesi.jpg",
 
   "availability": {
     "totalBranches": 2,
