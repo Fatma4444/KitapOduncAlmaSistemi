@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { CatalogHeader } from '../catalog-header/catalog-header';
-import { CatalogSearch } from '../catalog-search/catalog-search';
-import { CategoryTabs } from '../category-tabs/category-tabs';
-import { CatalogList } from '../catalog-list/catalog-list';
+import { CatalogHeader } from './catalog-header/catalog-header';
+import { CatalogSearch } from './catalog-search/catalog-search';
+import { CategoryTabs } from './category-tabs/category-tabs';
+import { CatalogList } from './catalog-list/catalog-list';
 
 @Component({
   selector: 'app-catalog-page',
@@ -11,5 +11,18 @@ import { CatalogList } from '../catalog-list/catalog-list';
   styleUrl: './catalog-page.css',
 })
 export class CatalogPage {
+
+  aramaMetni = '';
+
+  kategori = 'Tümü';
+
+  kategoriSec(kategori: string) {
+  this.kategori = kategori;
+  console.log('Seçilen kategori:', this.kategori);
+  }
+
+  aramaYap(metin: string) {
+    this.aramaMetni = metin;
+  }
 
 }

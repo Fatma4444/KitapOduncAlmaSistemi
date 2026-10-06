@@ -1,0 +1,202 @@
+[
+  {
+    "kitapAdi": "Suç ve Ceza",
+    "yazar": "Fyodor Dostoyevski",
+    "basimYili": 1866,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Mühendislik Fakültesi",
+    "kitapFoto": "images/suc-ve-ceza.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Kürk Mantolu Madonna",
+    "yazar": "Sabahattin Ali",
+    "basimYili": 1943,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/kurk-mantolu-madonna.jpg",
+    "tur": "E-Kitap"
+  },
+  {
+    "kitapAdi": "1984",
+    "yazar": "George Orwell",
+    "basimYili": 1949,
+    "dil": "Türkçe",
+    "raftaMi": false,
+    "fakulte": "İktisadi ve İdari Bilimler Fakültesi",
+    "kitapFoto": "images/1984.jpg",
+    "tur": "Tez"
+  },
+  {
+    "kitapAdi": "Sefiller",
+    "yazar": "Victor Hugo",
+    "basimYili": 1862,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/sefiller.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Beyaz Geceler",
+    "yazar": "Fyodor Dostoyevski",
+    "basimYili": 1848,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/beyaz-geceler.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Simyacı",
+    "yazar": "Paulo Coelho",
+    "basimYili": 1988,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Mühendislik Fakültesi",
+    "kitapFoto": "images/simyaci.jpg",
+    "tur": "E-Kitap"
+  },
+  {
+    "kitapAdi": "Dönüşüm",
+    "yazar": "Franz Kafka",
+    "basimYili": 1915,
+    "dil": "Türkçe",
+    "raftaMi": false,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/donusum.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "İnce Memed",
+    "yazar": "Yaşar Kemal",
+    "basimYili": 1955,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/ince-memed.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Tutunamayanlar",
+    "yazar": "Oğuz Atay",
+    "basimYili": 1971,
+    "dil": "Türkçe",
+    "raftaMi": false,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/tutunamayanlar.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Küçük Prens",
+    "yazar": "Antoine de Saint-Exupéry",
+    "basimYili": 1943,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Eğitim Fakültesi",
+    "kitapFoto": "images/kucuk-prens.jpg",
+    "tur": "E-Kitap"
+  },
+  {
+    "kitapAdi": "Don Kişot",
+    "yazar": "Miguel de Cervantes",
+    "basimYili": 1605,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/don-kisot.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Anna Karenina",
+    "yazar": "Lev Tolstoy",
+    "basimYili": 1878,
+    "dil": "Türkçe",
+    "raftaMi": false,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/anna-karenina.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Fahrenheit 451",
+    "yazar": "Ray Bradbury",
+    "basimYili": 1953,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Mühendislik Fakültesi",
+    "kitapFoto": "images/fahrenheit-451.jpg",
+    "tur": "E-Kitap"
+  },
+  {
+    "kitapAdi": "Hayvan Çiftliği",
+    "yazar": "George Orwell",
+    "basimYili": 1945,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "İktisadi ve İdari Bilimler Fakültesi",
+    "kitapFoto": "images/hayvan-ciftligi.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Yabancı",
+    "yazar": "Albert Camus",
+    "basimYili": 1942,
+    "dil": "Türkçe",
+    "raftaMi": false,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/yabanci.jpg",
+    "tur": "Tez"
+  },
+  {
+    "kitapAdi": "Uçurtma Avcısı",
+    "yazar": "Khaled Hosseini",
+    "basimYili": 2003,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Eğitim Fakültesi",
+    "kitapFoto": "images/ucurtma-avcisi.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Martı",
+    "yazar": "Richard Bach",
+    "basimYili": 1970,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Eğitim Fakültesi",
+    "kitapFoto": "images/marti.jpg",
+    "tur": "E-Kitap"
+  },
+  {
+    "kitapAdi": "Saatleri Ayarlama Enstitüsü",
+    "yazar": "Ahmet Hamdi Tanpınar",
+    "basimYili": 1961,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/saatleri-ayarlama-enstitusu.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Çalıkuşu",
+    "yazar": "Reşat Nuri Güntekin",
+    "basimYili": 1922,
+    "dil": "Türkçe",
+    "raftaMi": false,
+    "fakulte": "Eğitim Fakültesi",
+    "kitapFoto": "images/calikusu.jpg",
+    "tur": "Kitap"
+  },
+  {
+    "kitapAdi": "Kuyucaklı Yusuf",
+    "yazar": "Sabahattin Ali",
+    "basimYili": 1937,
+    "dil": "Türkçe",
+    "raftaMi": true,
+    "fakulte": "Fen Edebiyat Fakültesi",
+    "kitapFoto": "images/kuyucakli-yusuf.jpg",
+    "tur": "Makale"
+  }
+]
