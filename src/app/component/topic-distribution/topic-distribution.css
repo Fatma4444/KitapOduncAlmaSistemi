@@ -1,0 +1,16 @@
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: #f8f9fa;
+
+  box-sizing: border-box;
+}
+
+.page-content {
+  width: 100%;
+
+  padding: 0 16px;
+
+  box-sizing: border-box;
+}

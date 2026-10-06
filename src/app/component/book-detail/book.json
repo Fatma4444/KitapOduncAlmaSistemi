@@ -1,83 +1,271 @@
-{
-  "id": 1,
-  "title": "Makine Öğrenmesi",
-  "coverImage": "/images/images.jpg",
-  "authors": [
-    "Dr. Elif Kaya",
-    "Dr. Mehmet Demir"
-  ],
-
-  "year": 2021,
-  "language": "Türkçe",
-  "edition": "4. Baskı",
-  "isbn": "978-605-123-456-7",
-  "publisher": "Bingöl Üniversitesi Yayınları",
-  "category": "Bilgisayar Mühendisliği > Yapay Zeka",
-  "pageCount": 612,
-
-  "availability": {
-    "totalBranches": 2,
-    "available": true,
-    "availableCount": 2
-  },
-
- "locations": [
+[
   {
-    "library": "Mühendislik Fakültesi",
-    "locationType": "Fakülte Kütüphanesi",
-    "status": "Rafta Var",
-    "floor": "1. Kat",
-    "shelf": "B3",
-    "available": true,
-    "quantity": 1
-  },
-  {
-    "library": "Merkez Kütüphane",
-    "locationType": "Merkez Kütüphane",
-    "status": "Ödünçte",
-    "returnDate": "2026-10-15",
-    "floor": "Zemin Kat",
-    "section": "Bilim Salonu",
-    "shelf": "A1-12",
-    "available": true,
-    "quantity": 0
-  },
-  {
-    "library": "Fen-Edebiyat Fakültesi",
-    "locationType": "Fakülte Kütüphanesi",
-    "status": "Rafta Var",
-    "floor": "2. Kat",
-    "shelf": "C2",
-    "available": false,
-    "quantity": 2
-  }
-],
+    "id": 1,
+    "title": "Makine Öğrenmesi",
+    "coverImage": "/images/images.jpg",
+    "authors": [
+      "Dr. Elif Kaya",
+      "Dr. Mehmet Demir"
+    ],
 
-  "description": "Bu kitap, makine öğrenmesine giriş yapmak isteyen öğrenciler ve araştırmacılar için temel kavramları, yöntemleri ve güncel uygulamaları ele almaktadır.",
-
-  "details": {
+    "year": 2021,
+    "language": "Türkçe",
+    "edition": "4. Baskı",
     "isbn": "978-605-123-456-7",
-    "subject": "Bilgisayar Mühendisliği > Yapay Zeka",
+    "publisher": "Bingöl Üniversitesi Yayınları",
+    "category": "Bilgisayar Mühendisliği > Yapay Zeka",
     "pageCount": 612,
-    "publisher": "Bingöl Üniversitesi Yayınları"
+
+    "availability": {
+      "totalBranches": 2,
+      "available": true,
+      "availableCount": 2
+    },
+
+    "locations": [
+      {
+        "library": "Mühendislik Fakültesi",
+        "locationType": "Fakülte Kütüphanesi",
+        "status": "Rafta Var",
+        "floor": "1. Kat",
+        "shelf": "B3",
+        "available": true,
+        "quantity": 1
+      },
+      {
+        "library": "Merkez Kütüphane",
+        "locationType": "Merkez Kütüphane",
+        "status": "Ödünçte",
+        "returnDate": "2026-10-15",
+        "floor": "Zemin Kat",
+        "section": "Bilim Salonu",
+        "shelf": "A1-12",
+        "available": true,
+        "quantity": 0
+      },
+      {
+        "library": "Fen-Edebiyat Fakültesi",
+        "locationType": "Fakülte Kütüphanesi",
+        "status": "Rafta Var",
+        "floor": "2. Kat",
+        "shelf": "C2",
+        "available": false,
+        "quantity": 2
+      }
+    ],
+
+    "description": "Bu kitap, makine öğrenmesine giriş yapmak isteyen öğrenciler ve araştırmacılar için temel kavramları, yöntemleri ve güncel uygulamaları ele almaktadır.",
+
+    "details": {
+      "isbn": "978-605-123-456-7",
+      "subject": "Bilgisayar Mühendisliği > Yapay Zeka",
+      "pageCount": 612,
+      "publisher": "Bingöl Üniversitesi Yayınları"
+    },
+
+    "contents": [
+      "1. Makine Öğrenmesine Giriş",
+      "2. Veri Ön İşleme",
+      "3. Denetimli Öğrenme",
+      "4. Denetimsiz Öğrenme",
+      "5. Model Eğitimi ve Değerlendirme",
+      "6. Doğrusal Regresyon",
+      "7. Lojistik Regresyon",
+      "8. Karar Ağaçları",
+      "9. Destek Vektör Makineleri",
+      "10. K-En Yakın Komşu Algoritması",
+      "11. Kümeleme Algoritmaları",
+      "12. Yapay Sinir Ağları",
+      "13. Model Optimizasyonu",
+      "14. Gerçek Hayat Uygulamaları"
+    ],
+
+    "similarBooks": []
   },
 
-  "contents": [
-  "1. Makine Öğrenmesine Giriş",
-  "2. Veri Ön İşleme",
-  "3. Denetimli Öğrenme",
-  "4. Denetimsiz Öğrenme",
-  "5. Model Eğitimi ve Değerlendirme",
-  "6. Doğrusal Regresyon",
-  "7. Lojistik Regresyon",
-  "8. Karar Ağaçları",
-  "9. Destek Vektör Makineleri",
-  "10. K-En Yakın Komşu Algoritması",
-  "11. Kümeleme Algoritmaları",
-  "12. Yapay Sinir Ağları",
-  "13. Model Optimizasyonu",
-  "14. Gerçek Hayat Uygulamaları"
-],
+  {
+    "id": 2,
+    "title": "Temel Fizik",
+    "coverImage": "/images/images.jpg",
+    "authors": [
+      "Prof. Ahmet Yılmaz"
+    ],
+    "year": 2022,
+    "language": "Türkçe",
+    "edition": "3. Baskı",
+    "isbn": "978-605-222-111-2",
+    "publisher": "Bilim Yayınları",
+    "category": "Fen Bilimleri > Fizik",
+    "pageCount": 480,
+    "availability": {
+      "totalBranches": 2,
+      "available": true,
+      "availableCount": 2
+    },
+    "locations": [],
+    "description": "Fizik biliminin temel kavramlarını ve uygulamalarını ele alan kaynak kitap.",
+    "details": {
+      "isbn": "978-605-222-111-2",
+      "subject": "Fen Bilimleri > Fizik",
+      "pageCount": 480,
+      "publisher": "Bilim Yayınları"
+    },
+    "contents": [],
+    "similarBooks": []
+  },
 
-  "similarBooks": []
-}
+  {
+    "id": 3,
+    "title": "Sosyolojiye Giriş",
+    "coverImage": "/images/images.jpg",
+    "authors": [
+      "Dr. Zeynep Arslan"
+    ],
+    "year": 2020,
+    "language": "Türkçe",
+    "edition": "2. Baskı",
+    "isbn": "978-605-333-222-3",
+    "publisher": "Akademi Yayınları",
+    "category": "Sosyal Bilimler > Sosyoloji",
+    "pageCount": 350,
+    "availability": {
+      "totalBranches": 2,
+      "available": true,
+      "availableCount": 1
+    },
+    "locations": [],
+    "description": "Toplum ve birey arasındaki ilişkileri inceleyen temel sosyoloji kitabı.",
+    "details": {
+      "isbn": "978-605-333-222-3",
+      "subject": "Sosyal Bilimler > Sosyoloji",
+      "pageCount": 350,
+      "publisher": "Akademi Yayınları"
+    },
+    "contents": [],
+    "similarBooks": []
+  },
+
+  {
+    "id": 4,
+    "title": "Anatomi Temelleri",
+    "coverImage": "/images/images.jpg",
+    "authors": [
+      "Dr. Ayşe Kaya"
+    ],
+    "year": 2023,
+    "language": "Türkçe",
+    "edition": "5. Baskı",
+    "isbn": "978-605-444-333-4",
+    "publisher": "Sağlık Yayınları",
+    "category": "Sağlık Bilimleri > Anatomi",
+    "pageCount": 520,
+    "availability": {
+      "totalBranches": 2,
+      "available": true,
+      "availableCount": 2
+    },
+    "locations": [],
+    "description": "İnsan anatomisinin temel yapılarını anlatan kaynak kitap.",
+    "details": {
+      "isbn": "978-605-444-333-4",
+      "subject": "Sağlık Bilimleri > Anatomi",
+      "pageCount": 520,
+      "publisher": "Sağlık Yayınları"
+    },
+    "contents": [],
+    "similarBooks": []
+  },
+
+  {
+    "id": 5,
+    "title": "Türk Edebiyatına Giriş",
+    "coverImage": "/images/images.jpg",
+    "authors": [
+      "Prof. Mehmet Çelik"
+    ],
+    "year": 2019,
+    "language": "Türkçe",
+    "edition": "2. Baskı",
+    "isbn": "978-605-555-444-5",
+    "publisher": "Edebiyat Yayınları",
+    "category": "Edebiyat > Türk Edebiyatı",
+    "pageCount": 410,
+    "availability": {
+      "totalBranches": 1,
+      "available": true,
+      "availableCount": 1
+    },
+    "locations": [],
+    "description": "Türk edebiyatının temel dönemlerini ve önemli eserlerini inceleyen kitap.",
+    "details": {
+      "isbn": "978-605-555-444-5",
+      "subject": "Edebiyat > Türk Edebiyatı",
+      "pageCount": 410,
+      "publisher": "Edebiyat Yayınları"
+    },
+    "contents": [],
+    "similarBooks": []
+  },
+
+  {
+    "id": 6,
+    "title": "Veri Yapıları",
+    "coverImage": "/images/images.jpg",
+    "authors": [
+      "Dr. Mehmet Demir"
+    ],
+    "year": 2022,
+    "language": "Türkçe",
+    "edition": "3. Baskı",
+    "isbn": "978-605-666-555-6",
+    "publisher": "Bingöl Üniversitesi Yayınları",
+    "category": "Bilgisayar Mühendisliği > Yazılım",
+    "pageCount": 560,
+    "availability": {
+      "totalBranches": 3,
+      "available": true,
+      "availableCount": 3
+    },
+    "locations": [],
+    "description": "Veri yapıları ve algoritmaların temel prensiplerini anlatan kitap.",
+    "details": {
+      "isbn": "978-605-666-555-6",
+      "subject": "Bilgisayar Mühendisliği > Yazılım",
+      "pageCount": 560,
+      "publisher": "Bingöl Üniversitesi Yayınları"
+    },
+    "contents": [],
+    "similarBooks": []
+  },
+
+  {
+    "id": 7,
+    "title": "Web Programlama",
+    "coverImage": "/images/images.jpg",
+    "authors": [
+      "Dr. Elif Kaya"
+    ],
+    "year": 2024,
+    "language": "Türkçe",
+    "edition": "1. Baskı",
+    "isbn": "978-605-777-666-7",
+    "publisher": "Teknoloji Yayınları",
+    "category": "Bilgisayar Mühendisliği > Web Teknolojileri",
+    "pageCount": 390,
+    "availability": {
+      "totalBranches": 2,
+      "available": true,
+      "availableCount": 2
+    },
+    "locations": [],
+    "description": "Modern web teknolojilerini öğrenmek isteyenler için hazırlanmış kaynak.",
+    "details": {
+      "isbn": "978-605-777-666-7",
+      "subject": "Bilgisayar Mühendisliği > Web Teknolojileri",
+      "pageCount": 390,
+      "publisher": "Teknoloji Yayınları"
+    },
+    "contents": [],
+    "similarBooks": []
+  }
+]
