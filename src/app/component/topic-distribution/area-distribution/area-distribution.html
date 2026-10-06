@@ -1,1 +1,43 @@
-<p>area-distribution works!</p>
+<div class="area-distribution">
+
+  <div class="chart-container">
+
+    <!-- Donut Grafik -->
+    <div
+      class="donut-chart"
+      [style.background]="getChartBackground()">
+      
+      <div class="donut-center"></div>
+
+    </div>
+
+
+    <!-- Grafik Açıklamaları -->
+    <div class="legend">
+
+      @for (category of categories; track category.name) {
+
+        <div class="legend-item">
+
+          <span
+            class="legend-color"
+            [style.background-color]="category.color">
+          </span>
+
+          <span class="legend-name">
+            {{ category.name }}
+          </span>
+
+          <span class="legend-percentage">
+            {{ category.percentage | number:'1.1-1' }}%
+          </span>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</div>
