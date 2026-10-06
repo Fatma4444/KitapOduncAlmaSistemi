@@ -1,1 +1,80 @@
-<p>orientation works!</p>
+<div class="locations-section">
+
+  <div class="section-title">
+
+    <div class="section-title-left">
+      <span class="location-icon">📍</span>
+
+      <strong>
+        Bulunduğu Fakülteler & Raflar
+      </strong>
+    </div>
+
+    <span class="location-count">
+      {{ kitap.availability.totalBranches }} Şube
+    </span>
+
+  </div>
+
+
+  @for (location of kitap.locations; track location.library) {
+
+    <div class="location-card">
+
+      <div class="location-info">
+
+        <strong>
+          {{ location.library }}
+        </strong>
+
+        <span>
+          {{ location.locationType }}
+          •
+          {{ location.floor }}
+
+          @if (location.shelf) {
+            • Raf: {{ location.shelf }}
+          }
+
+        </span>
+
+      </div>
+
+
+      <div class="location-status">
+
+        @if (location.available) {
+
+          <span class="available">
+            Rafta Var
+          </span>
+
+          <button class="map-button">
+            🗺 Haritada Gör
+          </button>
+
+        } @else {
+
+          <span class="borrowed">
+
+            Ödünçte
+
+            @if (location.returnDate) {
+              ({{ location.returnDate }})
+            }
+
+          </span>
+
+          <button class="location-button">
+            🗺 Konum
+          </button>
+
+        }
+
+      </div>
+
+    </div>
+
+  }
+
+</div>
