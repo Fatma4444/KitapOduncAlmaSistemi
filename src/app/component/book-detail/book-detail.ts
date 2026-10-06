@@ -18,12 +18,12 @@ import { Footer } from '../common_component/footer/footer';
     Orientation,
     BookDescription,
     Footer
-],
+  ],
   templateUrl: './book-detail.html',
   styleUrl: './book-detail.css'
 })
 export class BookDetail {
 
-  kitap = kitap;
+  kitap = kitap[0];
 
 }
