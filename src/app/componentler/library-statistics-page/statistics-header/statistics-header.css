@@ -1,0 +1,36 @@
+.statistics-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.statistics-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #172033;
+  margin: 0;
+}
+
+.year-button {
+  border: none;
+  background: white;
+  border-radius: 20px;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: #374151;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.year-button span {
+  margin-left: 4px;
+}
