@@ -8,6 +8,20 @@
 
     <h2>{{ kitap.title }}</h2>
 
+    <p class="authors">
+      {{ kitap.authors.join(', ') }}
+    </p>
+
+    <p class="book-year">
+      {{ kitap.year }} • {{ kitap.language }} • {{ kitap.edition }}
+    </p>
+
+    <div class="book-status">
+      <span>
+        ✓ {{ kitap.availability.availableCount }} Lokasyonda Mevcut
+      </span>
+    </div>
+
   </div>
 
 </div>
