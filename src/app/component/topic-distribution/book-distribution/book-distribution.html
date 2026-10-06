@@ -1,1 +1,38 @@
-<p>book-distribution works!</p>
+<div class="book-distribution">
+
+  <div class="book-container">
+
+    <div class="book-header">
+      <span class="header-rank">#</span>
+      <span class="header-name">Kitap</span>
+      <span class="header-category">Kategori</span>
+      <span class="header-page">Sayfa</span>
+    </div>
+
+    @for (book of books; track book.id; let i = $index) {
+
+      <div class="book-item">
+
+        <span class="book-rank">
+          {{ i + 1 }}
+        </span>
+
+        <span class="book-name">
+          {{ book.title }}
+        </span>
+
+        <span class="book-category">
+          {{ book.category }}
+        </span>
+
+        <span class="book-page">
+          {{ book.pageCount }}
+        </span>
+
+      </div>
+
+    }
+
+  </div>
+
+</div>
