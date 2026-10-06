@@ -1,1 +1,172 @@
-<p>book-description works!</p>
+<div class="book-description">
+
+  <!-- Sekmeler -->
+  <div class="book-tabs">
+
+    <button
+      [class.active]="activeTab === 'description'"
+      (click)="showTab('description')">
+      Açıklama
+    </button>
+
+    <button
+      [class.active]="activeTab === 'contents'"
+      (click)="showTab('contents')">
+      İçindekiler
+    </button>
+
+    <button
+      [class.active]="activeTab === 'similar'"
+      (click)="showTab('similar')">
+      Benzer Kitaplar
+    </button>
+
+  </div>
+
+
+  <!-- Açıklama -->
+  @if (activeTab === 'description') {
+
+    <div class="description-content">
+
+      <p class="description-text">
+        {{ kitap.description }}
+      </p>
+
+
+      <div class="detail-row">
+
+        <span class="detail-icon">▣</span>
+
+        <span class="detail-title">
+          ISBN
+        </span>
+
+        <span class="detail-value">
+          {{ kitap.details.isbn }}
+        </span>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span class="detail-icon">▦</span>
+
+        <span class="detail-title">
+          Konu
+        </span>
+
+        <span class="detail-value">
+          {{ kitap.details.subject }}
+        </span>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span class="detail-icon">▤</span>
+
+        <span class="detail-title">
+          Sayfa Sayısı
+        </span>
+
+        <span class="detail-value">
+          {{ kitap.details.pageCount }}
+        </span>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span class="detail-icon">▥</span>
+
+        <span class="detail-title">
+          Yayınevi
+        </span>
+
+        <span class="detail-value">
+          {{ kitap.details.publisher }}
+        </span>
+
+      </div>
+
+    </div>
+
+  }
+
+
+  <!-- İçindekiler -->
+  @if (activeTab === 'contents') {
+
+    <div class="tab-content">
+
+      @if (kitap.contents.length > 0) {
+
+        @for (content of kitap.contents; track $index) {
+
+          <div class="content-item">
+
+            <span class="content-number">
+              {{ $index + 1 }}
+            </span>
+
+            <span class="content-name">
+              {{ content }}
+            </span>
+
+          </div>
+
+        }
+
+      } @else {
+
+        <p class="empty-message">
+          İçindekiler bilgisi bulunmamaktadır.
+        </p>
+
+      }
+
+    </div>
+
+  }
+
+
+  <!-- Benzer Kitaplar -->
+  @if (activeTab === 'similar') {
+
+    <div class="tab-content">
+
+      @if (kitap.similarBooks.length > 0) {
+
+        @for (book of kitap.similarBooks; track $index) {
+
+          <div class="similar-book">
+
+            <span class="similar-icon">
+              📖
+            </span>
+
+            <span class="similar-name">
+              {{ book }}
+            </span>
+
+          </div>
+
+        }
+
+      } @else {
+
+        <p class="empty-message">
+          Benzer kitap bulunmamaktadır.
+        </p>
+
+      }
+
+    </div>
+
+  }
+
+</div>

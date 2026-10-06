@@ -62,7 +62,22 @@
     "publisher": "Bingöl Üniversitesi Yayınları"
   },
 
-  "contents": [],
+  "contents": [
+  "1. Makine Öğrenmesine Giriş",
+  "2. Veri Ön İşleme",
+  "3. Denetimli Öğrenme",
+  "4. Denetimsiz Öğrenme",
+  "5. Model Eğitimi ve Değerlendirme",
+  "6. Doğrusal Regresyon",
+  "7. Lojistik Regresyon",
+  "8. Karar Ağaçları",
+  "9. Destek Vektör Makineleri",
+  "10. K-En Yakın Komşu Algoritması",
+  "11. Kümeleme Algoritmaları",
+  "12. Yapay Sinir Ağları",
+  "13. Model Optimizasyonu",
+  "14. Gerçek Hayat Uygulamaları"
+],
 
   "similarBooks": []
 }

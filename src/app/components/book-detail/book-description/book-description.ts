@@ -1,9 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-book-description',
-  styleUrl: './book-description.css',
+  standalone: true,
+  imports: [],
   templateUrl: './book-description.html',
+  styleUrl: './book-description.css'
 })
-export class BookDescription {}
+export class BookDescription {
+
+  @Input() kitap: any;
+
+  activeTab: 'description' | 'contents' | 'similar' = 'description';
+
+  showTab(tab: 'description' | 'contents' | 'similar') {
+    this.activeTab = tab;
+  }
+
+}
