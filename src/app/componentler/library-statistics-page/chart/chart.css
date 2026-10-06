@@ -1,0 +1,48 @@
+.chart-container {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.chart-container h2 {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.chart-area {
+  width: 100%;
+  overflow: hidden;
+}
+
+.chart-area svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Y ekseni yazıları */
+.chart-area svg text {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  fill: #9ca3af;
+}
+
+/* Ay isimleri */
+.chart-area svg text:nth-last-child(-n+12) {
+  fill: #6b7280;
+  font-size: 9px;
+}
+
+/* Grafik noktaları */
+.chart-area svg circle {
+  transition: r 0.2s ease;
+}
+
+/* Seçili nokta */
+.chart-area svg circle[stroke="#9b1c31"] {
+  filter: drop-shadow(0 2px 4px rgba(155, 28, 49, 0.2));
+}

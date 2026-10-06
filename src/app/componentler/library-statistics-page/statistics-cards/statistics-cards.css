@@ -1,0 +1,63 @@
+.statistics-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 80px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  flex-shrink: 0;
+}
+
+.books-icon {
+  background-color: #eaf2ff;
+}
+
+.members-icon {
+  background-color: #eaf8f1;
+}
+
+.borrowed-icon {
+  background-color: #fff3e7;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.stat-title {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Üçüncü kart */
+.stat-card:nth-child(3) {
+  grid-column: 1;
+}
