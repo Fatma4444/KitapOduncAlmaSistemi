@@ -6,6 +6,7 @@ import { Orientation } from './orientation/orientation';
 import { BookDescription } from './book-description/book-description';
 
 import kitap from './book.json';
+import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-book-detail',
@@ -15,8 +16,9 @@ import kitap from './book.json';
     BookPresentation,
     Header,
     Orientation,
-    BookDescription
-  ],
+    BookDescription,
+    Footer
+],
   templateUrl: './book-detail.html',
   styleUrl: './book-detail.css'
 })
