@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BookPresentation } from './book-presentation/book-presentation';
 import { Header } from './header/header';
+import { Orientation } from './orientation/orientation';
 
 import kitap from './book.json';
 
@@ -11,7 +12,8 @@ import kitap from './book.json';
   imports: [
     CommonModule,
     BookPresentation,
-    Header
+    Header,
+    Orientation
   ],
   templateUrl: './book-detail.html',
   styleUrl: './book-detail.css'

@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-orientation',
-  styleUrl: './orientation.css',
+  standalone: true,
+  imports: [],
   templateUrl: './orientation.html',
+  styleUrl: './orientation.css'
 })
-export class Orientation {}
+export class Orientation {
+  @Input() kitap: any;
+}

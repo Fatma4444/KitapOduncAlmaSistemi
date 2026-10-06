@@ -21,28 +21,37 @@
     "availableCount": 2
   },
 
-  "locations": [
-    {
-      "library": "Mühendislik Fakültesi",
-      "locationType": "Fakülte Kütüphanesi",
-      "status": "Rafta Var",
-      "floor": "1. Kat",
-      "shelf": "B3",
-      "available": true,
-      "quantity": 1
-    },
-    {
-      "library": "Merkez Kütüphane",
-      "locationType": "Merkez Kütüphane",
-      "status": "Ödünçte",
-      "returnDate": "2026-10-15",
-      "floor": "Zemin Kat",
-      "section": "Bilim Salonu",
-      "shelf": "A1-12",
-      "available": false,
-      "quantity": 0
-    }
-  ],
+ "locations": [
+  {
+    "library": "Mühendislik Fakültesi",
+    "locationType": "Fakülte Kütüphanesi",
+    "status": "Rafta Var",
+    "floor": "1. Kat",
+    "shelf": "B3",
+    "available": true,
+    "quantity": 1
+  },
+  {
+    "library": "Merkez Kütüphane",
+    "locationType": "Merkez Kütüphane",
+    "status": "Ödünçte",
+    "returnDate": "2026-10-15",
+    "floor": "Zemin Kat",
+    "section": "Bilim Salonu",
+    "shelf": "A1-12",
+    "available": true,
+    "quantity": 0
+  },
+  {
+    "library": "Fen-Edebiyat Fakültesi",
+    "locationType": "Fakülte Kütüphanesi",
+    "status": "Rafta Var",
+    "floor": "2. Kat",
+    "shelf": "C2",
+    "available": false,
+    "quantity": 2
+  }
+],
 
   "description": "Bu kitap, makine öğrenmesine giriş yapmak isteyen öğrenciler ve araştırmacılar için temel kavramları, yöntemleri ve güncel uygulamaları ele almaktadır.",
 
