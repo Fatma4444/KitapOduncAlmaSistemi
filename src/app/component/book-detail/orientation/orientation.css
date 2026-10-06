@@ -1,0 +1,202 @@
+.locations-section {
+    width: calc(100% - 24px);
+    margin: 35px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+
+    background-color: #f7f7f7;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+}
+
+
+/* Başlık */
+
+.section-title {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.section-title-left {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.location-icon {
+    font-size: 11px;
+    line-height: 1;
+}
+
+.section-title strong {
+    font-size: 10px;
+    line-height: 13px;
+    font-weight: 700;
+
+    color: #333333;
+}
+
+.location-count {
+    font-size: 8px;
+    line-height: 11px;
+
+    color: #888888;
+}
+
+
+/* Konum kartı */
+
+.location-card {
+    width: 100%;
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    padding: 7px 8px;
+    margin-bottom: 6px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #eeeeee;
+    border-radius: 7px;
+}
+
+
+/* Sol taraf */
+
+.location-info {
+    min-width: 0;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.location-info strong {
+    display: block;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 8px;
+    line-height: 11px;
+    font-weight: 700;
+
+    color: #444444;
+}
+
+.location-info span {
+    display: block;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 7px;
+    line-height: 9px;
+
+    color: #999999;
+}
+
+
+/* Sağ taraf */
+
+.location-status {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+    margin-left: 5px;
+}
+
+
+/* Rafta Var */
+
+.location-status .available {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 3px 5px;
+
+    border-radius: 5px;
+
+    background-color: #e8f7ed;
+    color: #28a45a;
+
+    font-size: 7px;
+    line-height: 9px;
+    font-weight: 600;
+}
+
+
+/* Ödünçte */
+
+.location-status .borrowed {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 3px 5px;
+
+    border-radius: 5px;
+
+    background-color: #fff1df;
+    color: #f28b22;
+
+    font-size: 7px;
+    line-height: 9px;
+    font-weight: 600;
+}
+
+
+/* Butonlar */
+
+.location-status button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 7px;
+
+    border-radius: 5px;
+
+    font-size: 7px;
+    line-height: 9px;
+
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+/* Haritada Gör */
+
+.location-status .map-button {
+    border: none;
+
+    background-color: #8f1026;
+    color: #ffffff;
+}
+
+
+/* Konum */
+
+.location-status .location-button {
+    border: 1px solid #dddddd;
+
+    background-color: #ffffff;
+    color: #666666;
+}

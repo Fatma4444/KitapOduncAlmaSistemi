@@ -1,0 +1,122 @@
+.quick-access {
+    width: calc(100% - 24px);
+
+    margin: 18px auto 0;
+
+    box-sizing: border-box;
+}
+
+
+/* Başlık kısmı */
+
+.quick-access-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.quick-access-title h3 {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #222;
+}
+
+.quick-access-title span {
+    font-size: 8px;
+
+    color: #777;
+
+    cursor: pointer;
+}
+
+
+/* Üç kartın bulunduğu alan */
+
+.quick-access-items {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* Kartların ortak özellikleri */
+
+.quick-access-new,
+.quick-acces-popular,
+.quick-access-suggestions {
+    flex: 1;
+
+    height: 50px;
+
+    background-color: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7px;
+
+    box-sizing: border-box;
+
+    gap: 6px;
+
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* İkonlar */
+
+.quick-access-new-icon,
+.quick-access-popular-icon,
+.quick-access-suggestions-icon {
+    width: 27px;
+    height: 27px;
+
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+
+    flex-shrink: 0;
+}
+
+
+/* İkon arka planları */
+
+.quick-access-new-icon {
+    background-color: #ffffff;
+}
+
+.quick-access-popular-icon {
+    background-color: #ffffff;
+}
+
+.quick-access-suggestions-icon {
+    background-color: #ffffff;
+}
+
+
+/* Kart yazıları */
+
+.quick-access-new span,
+.quick-acces-popular span,
+.quick-access-suggestions span {
+    font-size: 12px;
+
+    line-height: 11px;
+
+    color: #040404;
+}

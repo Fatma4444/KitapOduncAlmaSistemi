@@ -1,0 +1,45 @@
+.book-presentation {
+    width: calc(100% - 24px);
+    margin: 20px auto 0;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 4%;
+
+    box-sizing: border-box;
+}
+
+.book-presentation-text h2 {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 19px;
+
+    font-weight: 700;
+
+    color: #222222;
+}
+
+.book-status {
+    margin-top: 10px;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+
+    box-sizing: border-box;
+}
+
+.header-tittle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222222;
+}
