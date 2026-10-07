@@ -4,6 +4,7 @@ import { HomePage } from './component/home-page/home-page';
 import {BookDetail} from './component/book-detail/book-detail';
 import { LibraryStatisticsPage } from './componentler/library-statistics-page/library-statistics-page';
 import {TopicDistribution} from './component/topic-distribution/topic-distribution';
+import {Profile} from './component/profile/profile';
 
 
 export const routes: Routes = [ 
@@ -19,7 +20,10 @@ export const routes: Routes = [
     path: 'catalog',
     component: CatalogPage
   },
-
+  {
+    path: 'profile',
+    component: Profile
+  },
   {
     path: 'book-detail',
     component: BookDetail
