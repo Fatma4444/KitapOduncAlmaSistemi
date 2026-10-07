@@ -1,5 +1,27 @@
 .statistics-page {
   min-height: 100vh;
   background-color: #f6f7f9;
-  padding: 16px;
+  padding: 24px 20px 32px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Başlık */
+app-statistics-header {
+  display: block;
+  margin-bottom: 28px;
+}
+
+/* İstatistik kartları */
+app-statistics-cards {
+  display: block;
+  margin-bottom: 36px;
+}
+
+/* Grafik */
+app-chart {
+  display: block;
+  flex: 1;
 }

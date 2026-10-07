@@ -5,7 +5,7 @@ import { Header } from './header/header';
 import { Orientation } from './orientation/orientation';
 import { BookDescription } from './book-description/book-description';
 
-import kitap from './book.json';
+import kitaplar from './book.json';
 import { Footer } from '../common_component/footer/footer';
 
 @Component({
@@ -18,12 +18,12 @@ import { Footer } from '../common_component/footer/footer';
     Orientation,
     BookDescription,
     Footer
-],
+  ],
   templateUrl: './book-detail.html',
   styleUrl: './book-detail.css'
 })
 export class BookDetail {
 
-  kitap = kitap;
+  kitap = kitaplar[0];
 
 }

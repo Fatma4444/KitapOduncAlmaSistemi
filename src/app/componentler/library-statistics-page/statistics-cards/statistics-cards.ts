@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-statistics-cards',
-  styleUrl: './statistics-cards.css',
+  imports: [],
   templateUrl: './statistics-cards.html',
+  styleUrl: './statistics-cards.css'
 })
 export class StatisticsCards {}

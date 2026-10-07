@@ -3,6 +3,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .back-button {
@@ -11,6 +13,9 @@
   font-size: 28px;
   color: #374151;
   cursor: pointer;
+  padding: 0;
+  width: 24px;
+  flex-shrink: 0;
 }
 
 .statistics-header h1 {
@@ -18,19 +23,29 @@
   font-weight: 700;
   color: #172033;
   margin: 0;
+  white-space: nowrap;
+  text-align: center;
+  flex: 1;
 }
 
 .year-button {
   border: none;
   background: white;
   border-radius: 20px;
-  padding: 9px 12px;
-  font-size: 13px;
+  padding: 8px 11px;
+  font-size: 12px;
   color: #374151;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .year-button span {
-  margin-left: 4px;
+  font-size: 11px;
+  color: #6b7280;
 }
