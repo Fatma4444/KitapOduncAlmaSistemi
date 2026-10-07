@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import bookData from '../../book-detail/book.json';
 
 @Component({
-  imports: [],
   selector: 'app-book-distribution',
-  styleUrl: './book-distribution.css',
+  imports: [],
   templateUrl: './book-distribution.html',
+  styleUrl: './book-distribution.css'
 })
-export class BookDistribution {}
+export class BookDistribution {
+
+  books: any[] = Array.isArray(bookData) ? bookData : [bookData];
+
+}
