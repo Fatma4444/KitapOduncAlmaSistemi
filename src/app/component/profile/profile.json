@@ -5,25 +5,31 @@
   "profileImage": "images/profile.jpg",
 
   "categories": [
-  {
-    "title": "Ödünçteki Kitaplar",
-    "count": 3,
-    "icon": "📚"
-  },
-  {
-    "title": "Rezervasyonlarım",
-    "count": 1,
-    "icon": "🔍"
-  },
-  {
-    "title": "Geçmişim",
-    "count": null,
-    "icon": "📄"
-  },
-  {
-    "title": "Favorilerim",
-    "count": null,
-    "icon": "♡"
+    {
+      "title": "Ödünçteki Kitaplar",
+      "count": 3,
+      "icon": "📚"
+    },
+    {
+      "title": "Rezervasyonlarım",
+      "count": 1,
+      "icon": "🔍"
+    },
+    {
+      "title": "Geçmişim",
+      "count": null,
+      "icon": "📄"
+    },
+    {
+      "title": "Favorilerim",
+      "count": null,
+      "icon": "♡"
+    }
+  ],
+
+  "membershipStatus": {
+    "title": "Üyelik Bilgilerim",
+    "status": "Aktif",
+    "active": true
   }
-]
 }
