@@ -5,7 +5,7 @@ import { Header } from './header/header';
 import { Orientation } from './orientation/orientation';
 import { BookDescription } from './book-description/book-description';
 
-import kitap from './book.json';
+import kitaplar from './book.json';
 import { Footer } from '../common_component/footer/footer';
 
 @Component({
@@ -24,6 +24,6 @@ import { Footer } from '../common_component/footer/footer';
 })
 export class BookDetail {
 
-  kitap = kitap[0];
+  kitap = kitaplar[0];
 
 }
