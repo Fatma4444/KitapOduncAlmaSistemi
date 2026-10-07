@@ -1,1 +1,49 @@
-<p>membership-status works!</p>
+<div class="membership-status">
+
+  <div class="membership-icon">
+
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+
+      <circle
+        cx="12"
+        cy="8"
+        r="3"
+        fill="white"/>
+
+      <path
+        d="M5 20C5 16.6863 8.13401 14 12 14C15.866 14 19 16.6863 19 20"
+        fill="white"/>
+
+    </svg>
+
+  </div>
+
+  <div class="membership-details">
+
+    <h3>
+      {{ membership.title }}
+    </h3>
+
+    <div class="membership-state">
+
+      <span
+        class="status-dot"
+        [class.inactive]="!membership.active">
+      </span>
+
+      <span
+        class="status-text"
+        [class.inactive]="!membership.active">
+        {{ membership.status }}
+      </span>
+
+    </div>
+
+  </div>
+
+</div>

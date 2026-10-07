@@ -1,9 +1,21 @@
 import { Component } from '@angular/core';
+import profileData from '../profile.json';
+
+interface MembershipInfo {
+  title: string;
+  status: string;
+  active: boolean;
+}
 
 @Component({
-  imports: [],
   selector: 'app-membership-status',
-  styleUrl: './membership-status.css',
+  standalone: true,
+  imports: [],
   templateUrl: './membership-status.html',
+  styleUrl: './membership-status.css'
 })
-export class MembershipStatus {}
+export class MembershipStatus {
+
+  membership: MembershipInfo = profileData.membershipStatus;
+
+}

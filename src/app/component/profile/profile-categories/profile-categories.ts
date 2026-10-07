@@ -1,9 +1,21 @@
 import { Component } from '@angular/core';
+import profileData from '../profile.json';
+
+interface ProfileCategory {
+  title: string;
+  count: number | null;
+  icon: string;
+}
 
 @Component({
-  imports: [],
   selector: 'app-profile-categories',
-  styleUrl: './profile-categories.css',
+  standalone: true,
+  imports: [],
   templateUrl: './profile-categories.html',
+  styleUrl: './profile-categories.css'
 })
-export class ProfileCategories {}
+export class ProfileCategories {
+
+  categories: ProfileCategory[] = profileData.categories;
+
+}
