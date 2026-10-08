@@ -1,1 +1,29 @@
-<p>profile-categories works!</p>
+<div class="profile-categories">
+
+  @for (category of categories; track category.title) {
+
+    <div class="category-card">
+
+      <div class="category-left">
+
+        <span class="category-icon">
+          {{ category.icon }}
+        </span>
+
+        <span class="category-title">
+          {{ category.title }}
+        </span>
+
+      </div>
+
+      @if (category.count !== null) {
+        <span class="category-count">
+          {{ category.count }}
+        </span>
+      }
+
+    </div>
+
+  }
+
+</div>
