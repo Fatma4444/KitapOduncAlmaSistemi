@@ -1,77 +1,38 @@
-.borrowed-books-header {
-  height: 56px;
+.explanation {
   width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 16px;
   box-sizing: border-box;
-
-  background-color: #ffffff;
+  padding: 14px 16px;
+  background-color: #f8f8f8;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
 }
 
-/* Geri butonu */
-.back-button,
-.filter-button {
-  width: 40px;
-  height: 40px;
-
+.explanation-title {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
 
-  padding: 0;
-  border: none;
-  background: transparent;
+  margin-bottom: 7px;
 
-  cursor: pointer;
-}
-
-/* Geri oku */
-.back-icon {
-  font-size: 32px;
-  font-weight: 300;
-  line-height: 1;
-
+  font-size: 10px;
+  font-weight: 700;
   color: #555555;
 }
 
-/* Başlık */
-.borrowed-books-header h1 {
+.info-icon {
+  font-size: 10px;
+  color: #a51f3b;
+}
+
+.explanation p {
   margin: 0;
 
-  font-size: 16px;
+  font-size: 8px;
+  line-height: 1.5;
+  color: #888888;
+}
+
+.explanation strong {
+  color: #666666;
   font-weight: 600;
-  color: #222222;
-
-  text-align: center;
-}
-
-/* Filtre ikonu */
-.filter-icon {
-  position: relative;
-
-  width: 18px;
-  height: 18px;
-
-  display: block;
-}
-
-/* Filtrenin üst kısmı */
-.filter-icon::before {
-  content: '';
-
-  position: absolute;
-  top: 2px;
-  left: 1px;
-
-  width: 16px;
-  height: 13px;
-
-  border: 2px solid #555555;
-  border-top: none;
-
-  clip-path: polygon(0 0, 100% 0, 58% 55%, 58% 100%, 42% 100%, 42% 55%);
 }
