@@ -1,0 +1,13 @@
+{
+  "student": {
+    "name": "Fatma Altındağ",
+    "studentNumber": "220101023",
+    "activeBooks": 3,
+    "bookLimit": 3,
+    "limitText": "Limit Dolu"
+  },
+  "reminder": {
+    "title": "Hatırlatma:",
+    "message": "Teslim süresi dolmadan önce rezerve edilmemiş kitapların süresini 1 kez 15 gün uzatabilirsiniz."
+  }
+}
