@@ -1,9 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-statistics-header',
-  styleUrl: './statistics-header.css',
+  imports: [],
   templateUrl: './statistics-header.html',
+  styleUrl: './statistics-header.css'
 })
-export class StatisticsHeader {}
+export class StatisticsHeader {
+
+  secilenDonem = 'Son 1 Yıl';
+  menuAcik = false;
+
+  donemSec(donem: string): void {
+    this.secilenDonem = donem;
+    this.menuAcik = false;
+  }
+
+}
