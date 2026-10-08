@@ -1,0 +1,115 @@
+<div class="loan-information">
+
+  <!-- Filtreler -->
+  <div class="filters">
+
+    @for (filter of loanInformation.filters; track filter.name) {
+
+      <button
+        class="filter"
+        [class.active]="filter.active">
+
+        {{ filter.name }} ({{ filter.count }})
+
+      </button>
+
+    }
+
+  </div>
+
+
+  <!-- Kitaplar -->
+  <div class="books">
+
+    @for (book of loanInformation.books; track book.title) {
+
+      <div class="book-card">
+
+        <!-- Durum -->
+        <div class="book-status-row">
+
+          <span
+            class="book-status"
+            [class.warning]="book.statusType === 'warning'">
+
+            {{ book.status }}
+
+          </span>
+
+          <span class="remaining">
+            {{ book.remaining }}
+          </span>
+
+        </div>
+
+
+        <!-- Kitap bilgileri -->
+        <div class="book-content">
+
+          <div class="book-cover">
+            <img
+              [src]="book.cover"
+              [alt]="book.title">
+          </div>
+
+          <div class="book-details">
+
+            <h3>
+              {{ book.title }}
+            </h3>
+
+            <p>
+              {{ book.author }}
+            </p>
+
+            <p>
+              📅 {{ book.year }}
+            </p>
+
+            <p>
+              📍 {{ book.location }}
+            </p>
+
+            <div class="book-dates">
+
+              <span>
+                Alış: {{ book.borrowDate }}
+              </span>
+
+              <strong>
+                İade: {{ book.returnDate }}
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Butonlar -->
+        <div class="book-actions">
+
+         <button
+        class="extend-button"
+        [class.disabled]="!book.canExtend"
+        [disabled]="!book.canExtend"
+        (click)="extendBook(book)">
+
+        {{ book.extendText }}
+
+        </button>
+        
+          <button class="map-button">
+            ◉ Haritada Gör
+          </button>
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+</div>

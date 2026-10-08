@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import borrowedBooks from '../../../data/borrowed-books.json';
 
 @Component({
   imports: [],
@@ -6,4 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './loan-information.css',
   templateUrl: './loan-information.html',
 })
-export class LoanInformation {}
+export class LoanInformation {
+
+  loanInformation = borrowedBooks.loanInformation;
+
+  extendBook(book: any) {
+    book.canExtend = false;
+    book.extendText = 'Hak Doldu (1/1)';
+  }
+}
