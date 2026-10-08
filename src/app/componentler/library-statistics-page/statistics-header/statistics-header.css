@@ -28,6 +28,13 @@
   flex: 1;
 }
 
+/* Dönem seçici */
+
+.year-selector {
+  position: relative;
+  flex-shrink: 0;
+}
+
 .year-button {
   border: none;
   background: white;
@@ -38,8 +45,6 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   white-space: nowrap;
-  flex-shrink: 0;
-
   display: flex;
   align-items: center;
   gap: 5px;
@@ -48,4 +53,34 @@
 .year-button span {
   font-size: 11px;
   color: #6b7280;
+}
+
+/* Açılan menü */
+
+.year-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 115px;
+  background: white;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+}
+
+.year-menu button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 8px 7px;
+  border-radius: 7px;
+  font-size: 11px;
+  color: #374151;
+  text-align: left;
+  cursor: pointer;
+}
+
+.year-menu button:hover {
+  background-color: #f3f4f6;
 }

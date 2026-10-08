@@ -1,14 +1,44 @@
 <div class="statistics-header">
 
-  <button class="back-button">
-    ‹
-  </button>
+  <button class="back-button">‹</button>
 
   <h1>Kütüphane İstatistikleri</h1>
 
-  <button class="year-button">
-    Son 1 Yıl
-    <span>⌄</span>
-  </button>
+  <div class="year-selector">
+
+    <button
+      class="year-button"
+      (click)="menuAcik = !menuAcik"
+    >
+      {{ secilenDonem }}
+      <span>⌄</span>
+    </button>
+
+    @if (menuAcik) {
+      <div class="year-menu">
+
+        <button (click)="donemSec('Son 1 Ay')">
+          Son 1 Ay
+        </button>
+
+        <button (click)="donemSec('Son 3 Ay')">
+          Son 3 Ay
+        </button>
+
+        <button (click)="donemSec('Son 6 Ay')">
+          Son 6 Ay
+        </button>
+
+        <button (click)="donemSec('Son 9 Ay')">
+          Son 9 Ay
+        </button>
+
+        <button (click)="donemSec('Son 1 Yıl')">
+          Son 1 Yıl
+        </button>
+      </div>
+    }
+
+  </div>
 
 </div>
