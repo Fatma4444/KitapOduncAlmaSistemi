@@ -31,6 +31,10 @@ export const routes: Routes = [
     component: BookDetail
   },
   {
+    path: 'borrowed-books',
+    component: BorrowedBooks
+  },
+  {
   path: 'library-statistics',
   component: LibraryStatisticsPage
   },
