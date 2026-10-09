@@ -1,0 +1,19 @@
+<section class="year-section">
+  <div class="section-heading">
+    <h2>Ödünç Alma Geçmişi</h2>
+    <p>Geçmiş dönemlerde ödünç aldığınız kitaplar</p>
+  </div>
+
+  <div class="year-tabs-container">
+    <div class="year-tabs">
+      @for (year of years; track year) {
+        <button
+          class="year-tab"
+          [class.active]="selectedYear === year"
+          (click)="selectYear(year)">
+          {{ year }}
+        </button>
+      }
+    </div>
+  </div>
+</section>

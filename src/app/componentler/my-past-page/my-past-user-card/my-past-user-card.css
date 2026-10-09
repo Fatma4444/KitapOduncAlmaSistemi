@@ -1,0 +1,153 @@
+.user-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #eceef2;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(20, 25, 40, 0.03);
+}
+
+/* Kullanıcı bilgileri */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #fff8e7;
+  border: 1px solid #f7e9c6;
+  color: #81233a;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.user-details {
+  min-width: 0;
+}
+
+.user-details h2 {
+  margin: 0 0 5px;
+  color: #292d3a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.user-details p {
+  margin: 4px 0;
+  color: #777d8c;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* İstatistik kartları */
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  width: 100%;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  padding: 11px 9px;
+  background: #fafafa;
+  border: 1px solid #f0f0f2;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.stat-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.stat-icon.total {
+  background: #fff8e7;
+  color: #81233a;
+}
+
+.stat-icon.returned {
+  background: #e3f5e9;
+  color: #25834c;
+}
+
+.stat-icon.active {
+  background: #fff0d9;
+  color: #bd7918;
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #777d8c;
+  font-size: 9px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.stat-item strong {
+  color: #292d3a;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Daha geniş mobil ve tablet ekranlar */
+@media (min-width: 500px) {
+  .user-card {
+    padding: 20px;
+  }
+
+  .user-info {
+    gap: 15px;
+  }
+
+  .avatar {
+    width: 58px;
+    height: 58px;
+  }
+
+  .user-details h2 {
+    font-size: 17px;
+  }
+
+  .user-details p {
+    font-size: 11px;
+  }
+
+  .statistics {
+    gap: 12px;
+  }
+
+  .stat-item {
+    padding: 13px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  .stat-item strong {
+    font-size: 20px;
+  }
+}

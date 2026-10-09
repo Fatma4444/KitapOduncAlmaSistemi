@@ -1,0 +1,15 @@
+<div class="my-past-page">
+  <app-my-past-header></app-my-past-header>
+
+  <main class="page-content">
+    <app-my-past-user-card></app-my-past-user-card>
+
+    <app-my-past-year-tabs
+      (yearChange)="onYearChange($event)">
+    </app-my-past-year-tabs>
+
+    <app-my-past-loan-list
+      [selectedYear]="selectedYear">
+    </app-my-past-loan-list>
+  </main>
+</div>
