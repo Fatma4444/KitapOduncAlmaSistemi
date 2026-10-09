@@ -34,6 +34,12 @@ export const routes: Routes = [
   {
     path: 'library-statistics',
     component: LibraryStatisticsPage
+    path: 'borrowed-books',
+    component: BorrowedBooks
+  },
+  {
+  path: 'library-statistics',
+  component: LibraryStatisticsPage
   },
   {
     path: 'new-arrivals',
