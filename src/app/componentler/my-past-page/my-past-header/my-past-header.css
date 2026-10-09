@@ -1,0 +1,55 @@
+
+.page-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 32px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.page-header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #292929;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.back-button,
+.filter-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #333333;
+  cursor: pointer;
+}
+
+.back-button {
+  width: 28px;
+  height: 32px;
+}
+
+.back-icon {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.filter-button {
+  width: 28px;
+  height: 32px;
+}
+
+.back-button:hover,
+.filter-button:hover {
+  color: #81233a;
+}
