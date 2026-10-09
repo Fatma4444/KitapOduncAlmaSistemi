@@ -7,7 +7,8 @@
     "raftaMi": true,
     "fakulte": "Mühendislik Fakültesi",
     "kitapFoto": "images/suc-ve-ceza.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2024-03-15"
   },
   {
     "kitapAdi": "Kürk Mantolu Madonna",
@@ -17,7 +18,8 @@
     "raftaMi": true,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/kurk-mantolu-madonna.jpg",
-    "tur": "E-Kitap"
+    "tur": "E-Kitap",
+    "eklenmeTarihi": "2026-02-10"
   },
   {
     "kitapAdi": "1984",
@@ -27,7 +29,8 @@
     "raftaMi": false,
     "fakulte": "İktisadi ve İdari Bilimler Fakültesi",
     "kitapFoto": "images/1984.jpg",
-    "tur": "Tez"
+    "tur": "Tez",
+    "eklenmeTarihi": "2026-10-08"
   },
   {
     "kitapAdi": "Sefiller",
@@ -37,7 +40,8 @@
     "raftaMi": true,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/sefiller.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2025-06-21"
   },
   {
     "kitapAdi": "Beyaz Geceler",
@@ -47,7 +51,8 @@
     "raftaMi": true,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/beyaz-geceler.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2026-10-09"
   },
   {
     "kitapAdi": "Simyacı",
@@ -57,7 +62,8 @@
     "raftaMi": true,
     "fakulte": "Mühendislik Fakültesi",
     "kitapFoto": "images/simyaci.jpg",
-    "tur": "E-Kitap"
+    "tur": "E-Kitap",
+    "eklenmeTarihi": "2025-11-05"
   },
   {
     "kitapAdi": "Dönüşüm",
@@ -67,7 +73,8 @@
     "raftaMi": false,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/donusum.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2024-09-18"
   },
   {
     "kitapAdi": "İnce Memed",
@@ -77,7 +84,8 @@
     "raftaMi": true,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/ince-memed.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2026-08-12"
   },
   {
     "kitapAdi": "Tutunamayanlar",
@@ -87,7 +95,8 @@
     "raftaMi": false,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/tutunamayanlar.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2025-03-30"
   },
   {
     "kitapAdi": "Küçük Prens",
@@ -97,7 +106,8 @@
     "raftaMi": true,
     "fakulte": "Eğitim Fakültesi",
     "kitapFoto": "images/kucuk-prens.jpg",
-    "tur": "E-Kitap"
+    "tur": "E-Kitap",
+    "eklenmeTarihi": "2026-07-06"
   },
   {
     "kitapAdi": "Don Kişot",
@@ -107,7 +117,8 @@
     "raftaMi": true,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/don-kisot.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2024-01-10"
   },
   {
     "kitapAdi": "Anna Karenina",
@@ -117,7 +128,8 @@
     "raftaMi": false,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/anna-karenina.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2025-10-03"
   },
   {
     "kitapAdi": "Fahrenheit 451",
@@ -127,7 +139,8 @@
     "raftaMi": true,
     "fakulte": "Mühendislik Fakültesi",
     "kitapFoto": "images/fahrenheit-451.jpg",
-    "tur": "E-Kitap"
+    "tur": "E-Kitap",
+    "eklenmeTarihi": "2026-04-04"
   },
   {
     "kitapAdi": "Hayvan Çiftliği",
@@ -137,7 +150,8 @@
     "raftaMi": true,
     "fakulte": "İktisadi ve İdari Bilimler Fakültesi",
     "kitapFoto": "images/hayvan-ciftligi.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2024-12-22"
   },
   {
     "kitapAdi": "Yabancı",
@@ -147,7 +161,8 @@
     "raftaMi": false,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/yabanci.jpg",
-    "tur": "Tez"
+    "tur": "Tez",
+    "eklenmeTarihi": "2026-10-08"
   },
   {
     "kitapAdi": "Uçurtma Avcısı",
@@ -157,7 +172,8 @@
     "raftaMi": true,
     "fakulte": "Eğitim Fakültesi",
     "kitapFoto": "images/ucurtma-avcisi.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2025-08-28"
   },
   {
     "kitapAdi": "Martı",
@@ -167,7 +183,8 @@
     "raftaMi": true,
     "fakulte": "Eğitim Fakültesi",
     "kitapFoto": "images/marti.jpg",
-    "tur": "E-Kitap"
+    "tur": "E-Kitap",
+    "eklenmeTarihi": "2026-05-02"
   },
   {
     "kitapAdi": "Saatleri Ayarlama Enstitüsü",
@@ -177,7 +194,8 @@
     "raftaMi": true,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/saatleri-ayarlama-enstitusu.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2024-06-15"
   },
   {
     "kitapAdi": "Çalıkuşu",
@@ -187,7 +205,8 @@
     "raftaMi": false,
     "fakulte": "Eğitim Fakültesi",
     "kitapFoto": "images/calikusu.jpg",
-    "tur": "Kitap"
+    "tur": "Kitap",
+    "eklenmeTarihi": "2025-09-27"
   },
   {
     "kitapAdi": "Kuyucaklı Yusuf",
@@ -197,6 +216,7 @@
     "raftaMi": true,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/kuyucakli-yusuf.jpg",
-    "tur": "Makale"
+    "tur": "Makale",
+    "eklenmeTarihi": "2026-01-01"
   }
 ]

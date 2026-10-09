@@ -5,7 +5,8 @@ import {BookDetail} from './component/book-detail/book-detail';
 import { LibraryStatisticsPage } from './componentler/library-statistics-page/library-statistics-page';
 import {TopicDistribution} from './component/topic-distribution/topic-distribution';
 import {Profile} from './component/profile/profile';
-import {BorrowedBooks} from './component/borrowed-books/borrowed-books';
+import { NewArrivalsPage } from './componentler/new-arrivals-page/new-arrivals-page';
+import { BorrowedBooks } from './component/borrowed-books/borrowed-books';
 
 
 export const routes: Routes = [ 
@@ -36,6 +37,13 @@ export const routes: Routes = [
   {
   path: 'library-statistics',
   component: LibraryStatisticsPage
+  },
+  {
+  path: 'new-arrivals',
+  component: NewArrivalsPage
+  },
+    path: 'borrowed-books',
+    component: BorrowedBooks
   }
 
 ];

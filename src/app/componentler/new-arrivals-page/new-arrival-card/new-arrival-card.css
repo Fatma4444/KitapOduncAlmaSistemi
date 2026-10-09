@@ -1,0 +1,43 @@
+.book-card {
+  width: 100%;
+  background: white;
+  box-sizing: border-box;
+}
+
+.book-cover {
+  width: 100%;
+  height: 175px;
+  background: lightgray;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-info {
+  padding-top: 6px;
+}
+
+.category {
+  display: block;
+  font-size: 10px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.book-info h3 {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #111;
+}
+
+.book-info p {
+  margin-top: 6px;
+  font-size: 10px;
+  color: #999;
+}
