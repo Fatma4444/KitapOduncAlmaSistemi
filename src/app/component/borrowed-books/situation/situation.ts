@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import borrowedBooks from '../../../data/borrowed-books.json';
 
 @Component({
   imports: [],
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './situation.css',
   templateUrl: './situation.html',
 })
-export class Situation {}
+export class Situation {
+
+  situation = borrowedBooks;
+
+}
