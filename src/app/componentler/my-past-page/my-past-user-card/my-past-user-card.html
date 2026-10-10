@@ -1,38 +1,48 @@
 <section class="user-card">
   <div class="user-info">
-    <div class="avatar">NT</div>
+    <div class="user-avatar">
+      <svg
+        class="book-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <path d="M12 7v14" />
+        <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H12v18H5.5A2.5 2.5 0 0 0 3 23z"
+          transform="translate(0 -1)" />
+        <path d="M12 3h6.5A2.5 2.5 0 0 1 21 5.5V22H12" />
+      </svg>
+    </div>
 
     <div class="user-details">
-      <h2>Nergis Tetik</h2>
-      <p>Öğrenci No: 2023001001</p>
-      <p>Bilgisayar Mühendisliği</p>
+      <div class="user-name-row">
+        <h2>Nergis Tetik</h2>
+        <span class="student-number">• &nbsp;2023001001</span>
+      </div>
+
+      <p>Bilgisayar Mühendisliği Bölümü</p>
     </div>
+
+    <span class="clean-badge">Temiz Sicil</span>
   </div>
 
   <div class="statistics">
     <div class="stat-item">
-      <div class="stat-icon total">📚</div>
-      <div>
-        <span class="stat-label">Toplam Ödünç</span>
-        <strong>24</strong>
-      </div>
+      <span class="stat-label">Toplam Okunan</span>
+      <strong class="total-value">24 Kitap</strong>
     </div>
 
     <div class="stat-item">
-      <div class="stat-icon returned">✓</div>
-      <div>
-        <span class="stat-label">İade Edilen</span>
-        <strong>20</strong>
-      </div>
+      <span class="stat-label">Zamanında İade</span>
+      <strong class="returned-value">%94</strong>
     </div>
 
     <div class="stat-item">
-      <div class="stat-icon active">↻</div>
-      <div>
-        <span class="stat-label">Aktif Ödünç</span>
-        <strong>4</strong>
-      </div>
+      <span class="stat-label">Ceza Gün Sayısı</span>
+      <strong class="penalty-value">0 Gün</strong>
     </div>
   </div>
 </section>
-

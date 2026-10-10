@@ -1,75 +1,269 @@
 
 <section class="loan-list">
-  <div class="list-summary">
-    <span>
-      <strong>{{ filteredLoans.length }}</strong> kayıt bulundu
-    </span>
+  @if (loading) {
+    <div class="empty-state">
+      <p>Ödünç geçmişi yükleniyor...</p>
+    </div>
+  } @else if (errorMessage) {
+    <div class="empty-state">
+      <p>{{ errorMessage }}</p>
+    </div>
+  } @else if (filteredLoans.length === 0) {
+    <div class="empty-state">
+      <p>Bu döneme ait ödünç geçmişi bulunamadı.</p>
+    </div>
+  } @else {
+    <div class="list-summary">
+      <span><strong>{{ filteredLoans.length }}</strong> kitap bulundu</span>
+    </div>
 
-    <span class="summary-details">
-      <span>{{ returnedCount }} iade edildi</span>
-      <span>{{ activeCount }} aktif ödünç</span>
-    </span>
-  </div>
-
-  @for (loan of filteredLoans; track loan.id) {
-    <article class="loan-card">
-      <div class="book-cover" [ngClass]="loan.coverClass">
-        <span class="cover-decoration">✦</span>
-        <span class="cover-title">{{ loan.title }}</span>
-        <span class="cover-author">{{ loan.author }}</span>
-      </div>
-
-      <div class="loan-info">
-        <div class="book-heading">
-          <div>
-            <span class="book-category">{{ loan.category }}</span>
-            <h3>{{ loan.title }}</h3>
-            <p class="book-author">{{ loan.author }}</p>
-          </div>
-
+    @for (loan of filteredLoans; track $index) {
+      <article class="loan-card">
+        <div class="card-top">
           <span
             class="status"
-            [class.returned]="loan.status === 'İade Edildi'"
-            [class.active]="loan.status === 'Aktif'"
-            [class.overdue]="loan.status === 'Gecikmiş'">
-            <span class="status-dot"></span>
-            {{ loan.status }}
+            [class.returned]="loan.durum === 'İade Edildi' && loan.iadeDurumu === 'Zamanında'"
+            [class.late]="loan.iadeDurumu === 'Gecikmeli'"
+            [class.active]="loan.durum === 'Ödünçte'"
+          >
+            <span class="status-icon">
+              {{ loan.durum === 'İade Edildi' && loan.iadeDurumu === 'Zamanında'
+                ? '✓'
+                : loan.iadeDurumu === 'Gecikmeli'
+                  ? '!'
+                  : '↗' }}
+            </span>
+
+            @if (loan.durum === 'İade Edildi' && loan.iadeDurumu === 'Zamanında') {
+              İade Edildi (Zamanında)
+            } @else if (loan.iadeDurumu === 'Gecikmeli') {
+              {{ loan.gecikmeGunu ?? 0 }} Gün Gecikmeli
+              @if (loan.afKapsaminda) {
+                (Af Kapsamında)
+              }
+            } @else {
+              {{ loan.durum }}
+            }
           </span>
+
+          <span class="semester">{{ loan.donem }}</span>
         </div>
+
+        @if (loan.kitap) {
+          <div class="book-content">
+            <div class="book-cover">
+              <img
+                [src]="'/' + loan.kitap.kitapFoto"
+                [alt]="loan.kitap.kitapAdi"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-info">
+              <span class="book-category">{{ loan.kitap.tur }}</span>
+              <h3>{{ loan.kitap.kitapAdi }}</h3>
+              <p class="book-author">{{ loan.kitap.yazar }}</p>
+
+              <div class="book-location">
+                <p class="shelf-info">Raf Kodu: {{ loan.rafKodu }}</p>
+                <p class="location-info">
+                  <span class="location-pin">📍</span>
+                  {{ loan.kutuphaneKonumu }}
+                </p>
+              </div>
+            </div>
+          </div>
+        } @else {
+          <p class="missing-book">
+            Kitap katalogda bulunamadı: {{ loan.kitapAdi }}
+          </p>
+        }
 
         <div class="loan-dates">
           <div class="date-item">
-            <span class="date-label">Ödünç Alma Tarihi</span>
-            <strong>{{ loan.loanDate }}</strong>
+            <span>Ödünç Alma</span>
+            <strong>{{ formatDate(loan.oduncTarihi) }}</strong>
           </div>
 
           <div class="date-item">
-            <span class="date-label">Son İade Tarihi</span>
-            <strong>{{ loan.dueDate }}</strong>
+            <span>Süre</span>
+            <strong>{{ loan.oduncSuresi }} gün</strong>
           </div>
 
-          @if (loan.returnDate) {
-            <div class="date-item">
-              <span class="date-label">İade Tarihi</span>
-              <strong>{{ loan.returnDate }}</strong>
-            </div>
-          }
+          <div class="date-item">
+            <span>İade Tarihi</span>
+            <strong>{{ formatDate(loan.iadeTarihi) }}</strong>
+          </div>
         </div>
-      </div>
 
-      <button
-        class="detail-button"
-        (click)="showDetails(loan)"
-        type="button">
-        Detaylar <span>→</span>
-      </button>
-    </article>
-  } @empty {
-    <div class="empty-state">
-      <span class="empty-icon">📚</span>
-      <h3>Kayıt bulunamadı</h3>
-      <p>Seçilen dönem için ödünç alma kaydı bulunmuyor.</p>
-    </div>
+        <div class="card-actions">
+          <button
+            type="button"
+            class="borrow-button"
+            (click)="openBorrowModal(loan)"
+          >
+            <span class="button-icon" aria-hidden="true">↻</span>
+            <span>Tekrar Ödünç Al</span>
+          </button>
+
+          <button
+            type="button"
+            class="review-button"
+            (click)="openReviewModal(loan)"
+          >
+            <span class="button-icon" aria-hidden="true">☆</span>
+            <span>Değerlendir</span>
+          </button>
+        </div>
+      </article>
+    }
   }
 </section>
 
+@if (modalType && selectedLoan) {
+  <div class="modal-overlay" (click)="closeModal()">
+    <section
+      class="action-modal"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-label]="modalType === 'borrow' ? 'Tekrar ödünç al' : 'Kitabı değerlendir'"
+      (click)="$event.stopPropagation()"
+    >
+      <button
+        type="button"
+        class="modal-close"
+        aria-label="Pencereyi kapat"
+        (click)="closeModal()"
+      >
+        ×
+      </button>
+
+      @if (modalType === 'borrow') {
+        <h2>Tekrar Ödünç Al</h2>
+
+        <div class="modal-book">
+          @if (selectedLoan.kitap) {
+            <img
+              [src]="'/' + selectedLoan.kitap.kitapFoto"
+              [alt]="selectedLoan.kitap.kitapAdi"
+            />
+          }
+
+          <div>
+            <h3>{{ selectedLoan.kitapAdi }}</h3>
+            <p>{{ selectedLoan.kitap?.yazar }}</p>
+          </div>
+        </div>
+
+        @if (!borrowConfirmed) {
+          <p class="modal-description">
+            Bu kitabı tekrar ödünç almak istediğinize emin misiniz?
+          </p>
+        }
+
+        @if (feedbackMessage) {
+          <p class="modal-feedback">{{ feedbackMessage }}</p>
+        }
+
+        <div class="modal-actions">
+          @if (!borrowConfirmed) {
+            <button
+              type="button"
+              class="modal-cancel"
+              (click)="closeModal()"
+            >
+              Vazgeç
+            </button>
+
+            <button
+              type="button"
+              class="modal-confirm"
+              (click)="confirmBorrow()"
+            >
+              Onayla
+            </button>
+          } @else {
+            <button
+              type="button"
+              class="modal-confirm"
+              (click)="closeModal()"
+            >
+              Tamam
+            </button>
+          }
+        </div>
+      }
+
+      @if (modalType === 'review') {
+        <h2>Kitabı Değerlendir</h2>
+
+        <h3 class="review-book-title">
+          {{ selectedLoan.kitapAdi }}
+        </h3>
+
+        @if (!reviewSubmitted) {
+          <p class="modal-description">
+            Bu kitaba kaç yıldız veriyorsunuz?
+          </p>
+
+          <div class="rating-stars" aria-label="Yıldız puanı">
+            @for (star of [1, 2, 3, 4, 5]; track star) {
+              <button
+                type="button"
+                [class.selected]="star <= selectedRating"
+                [attr.aria-label]="star + ' yıldız'"
+                [attr.aria-pressed]="star === selectedRating"
+                (click)="selectRating(star)"
+              >
+                ★
+              </button>
+            }
+          </div>
+
+          <label for="reviewComment">Yorumunuz</label>
+
+          <textarea
+            id="reviewComment"
+            rows="4"
+            maxlength="1000"
+            placeholder="Kitap hakkındaki düşüncelerinizi yazın..."
+            [value]="reviewComment"
+            (input)="reviewComment = $any($event.target).value"
+          ></textarea>
+        }
+
+        @if (feedbackMessage) {
+          <p class="modal-feedback">{{ feedbackMessage }}</p>
+        }
+
+        <div class="modal-actions">
+          @if (!reviewSubmitted) {
+            <button
+              type="button"
+              class="modal-cancel"
+              (click)="closeModal()"
+            >
+              Vazgeç
+            </button>
+
+            <button
+              type="button"
+              class="modal-confirm"
+              (click)="submitReview()"
+            >
+              Gönder
+            </button>
+          } @else {
+            <button
+              type="button"
+              class="modal-confirm"
+              (click)="closeModal()"
+            >
+              Tamam
+            </button>
+          }
+        </div>
+      }
+    </section>
+  </div>
+}

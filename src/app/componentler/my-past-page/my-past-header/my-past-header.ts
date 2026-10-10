@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 
@@ -6,7 +7,7 @@ import { Location } from '@angular/common';
   standalone: true,
   imports: [],
   templateUrl: './my-past-header.html',
-  styleUrl: './my-past-header.css'
+  styleUrl: './my-past-header.css',
 })
 export class MyPastHeader {
   constructor(private location: Location) {}
