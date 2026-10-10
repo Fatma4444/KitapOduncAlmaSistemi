@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+
+import {
+  Component,
+  EventEmitter,
+  Output,
+  Input,
+  OnChanges,
+  SimpleChanges
+} from '@angular/core';
 
 @Component({
   selector: 'app-my-past-year-tabs',
@@ -7,8 +15,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './my-past-year-tabs.html',
   styleUrl: './my-past-year-tabs.css'
 })
-export class MyPastYearTabs {
-  selectedYear = 'Tümü';
+export class MyPastYearTabs implements OnChanges {
+  @Input() selectedYear = 'Tümü';
+  @Input() yearCounts: { [year: string]: number } = {};
+
+  @Output() yearChange = new EventEmitter<string>();
 
   years = [
     'Tümü',
@@ -21,10 +32,18 @@ export class MyPastYearTabs {
     '2019–2020'
   ];
 
-  @Output() yearChange = new EventEmitter<string>();
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['selectedYear']) {
+      this.selectedYear = this.selectedYear || 'Tümü';
+    }
+  }
 
   selectYear(year: string): void {
     this.selectedYear = year;
     this.yearChange.emit(year);
+  }
+
+  getCount(year: string): number {
+    return this.yearCounts[year] ?? 0;
   }
 }

@@ -1,3 +1,4 @@
+
 .my-past-page {
   min-height: 100vh;
   background-color: #f5f6fa;
@@ -10,5 +11,15 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .my-past-page {
+    padding: 16px;
+  }
+
+  .page-content {
+    gap: 16px;
+  }
 }

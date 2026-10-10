@@ -1,3 +1,4 @@
+
 <div class="my-past-page">
   <app-my-past-header></app-my-past-header>
 
@@ -5,11 +6,14 @@
     <app-my-past-user-card></app-my-past-user-card>
 
     <app-my-past-year-tabs
-      (yearChange)="onYearChange($event)">
-    </app-my-past-year-tabs>
+      [selectedYear]="selectedYear"
+      [yearCounts]="yearCounts"
+      (yearChange)="onYearChange($event)"
+    ></app-my-past-year-tabs>
 
     <app-my-past-loan-list
-      [selectedYear]="selectedYear">
-    </app-my-past-loan-list>
+      [selectedYear]="selectedYear"
+      (countsChange)="onCountsChange($event)"
+    ></app-my-past-loan-list>
   </main>
 </div>

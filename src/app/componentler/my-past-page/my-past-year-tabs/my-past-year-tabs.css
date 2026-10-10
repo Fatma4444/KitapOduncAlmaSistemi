@@ -1,73 +1,42 @@
-.year-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.section-heading h2 {
-  margin: 0;
-  color: #292d3a;
-  font-size: 21px;
-  font-weight: 700;
-}
-
-.section-heading p {
-  margin: 7px 0 0;
-  color: #777d8c;
-  font-size: 13px;
-}
-
-.year-tabs-container {
-  max-width: 100%;
-  min-width: 0;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #c9a2ac transparent;
-}
 
 .year-tabs {
   display: flex;
   align-items: center;
   gap: 8px;
-  width: max-content;
-  padding: 5px;
-  background: #ffffff;
-  border: 1px solid #eceef2;
-  border-radius: 12px;
+  width: 100%;
+  overflow-x: auto;
+  padding: 4px 0 8px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
 }
 
 .year-tab {
-  flex-shrink: 0;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 8px;
-  background: transparent;
-  color: #666c7a;
-  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 4px;
+  padding: 9px 15px;
+  border: 1px solid #e4e4e9;
+  border-radius: 22px;
+  background: #ffffff;
+  color: #55556b;
+  font-family: inherit;
+  font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.year-tab:hover:not(.active) {
-  background: #f5f6fa;
+.year-tab:hover {
+  border-color: #85233b;
+  color: #85233b;
 }
 
 .year-tab.active {
-  background: #81233a;
+  background: #85233b;
+  border-color: #85233b;
   color: #ffffff;
-}
-
-@media (max-width: 600px) {
-  .year-section {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .year-tabs-container {
-    width: 100%;
-  }
+  font-weight: 600;
 }

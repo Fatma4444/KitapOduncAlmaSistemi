@@ -1,135 +1,218 @@
 
-import { Component, Input } from '@angular/core';
-import { NgClass } from '@angular/common';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnInit,
+  ChangeDetectorRef,
+  ChangeDetectionStrategy
+} from '@angular/core';
 
-interface LoanRecord {
-  id: number;
-  title: string;
-  author: string;
-  category: string;
-  loanDate: string;
-  dueDate: string;
-  returnDate: string;
-  status: 'İade Edildi' | 'Aktif' | 'Gecikmiş';
-  year: string;
-  coverClass: string;
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { forkJoin } from 'rxjs';
+
+interface Book {
+  kitapAdi: string;
+  yazar: string;
+  basimYili: number;
+  dil: string;
+  kitapFoto: string;
+  tur: string;
+}
+
+interface LoanHistory {
+  kitapAdi: string;
+  donem: string;
+  durum: string;
+  iadeDurumu?: string;
+  rafKodu: string;
+  kutuphaneKonumu: string;
+  oduncTarihi: string;
+  iadeTarihi: string;
+  oduncSuresi: number;
+  gecikmeGunu?: number;
+  afKapsaminda?: boolean;
+}
+
+interface LoanRecord extends LoanHistory {
+  kitap?: Book;
 }
 
 @Component({
   selector: 'app-my-past-loan-list',
   standalone: true,
-  imports: [NgClass],
+  imports: [CommonModule],
   templateUrl: './my-past-loan-list.html',
-  styleUrl: './my-past-loan-list.css'
+  styleUrl: './my-past-loan-list.css',
+  changeDetection: ChangeDetectionStrategy.Default
 })
-export class MyPastLoanList {
-
+export class MyPastLoanList implements OnInit {
   @Input() selectedYear = 'Tümü';
 
-  loans: LoanRecord[] = [
-    {
-      id: 1,
-      title: 'Suç ve Ceza',
-      author: 'Fyodor Dostoyevski',
-      category: 'Roman',
-      loanDate: '12.10.2025',
-      dueDate: '26.10.2025',
-      returnDate: '24.10.2025',
-      status: 'İade Edildi',
-      year: '2025–2026',
-      coverClass: 'cover-red'
-    },
-    {
-      id: 2,
-      title: '1984',
-      author: 'George Orwell',
-      category: 'Distopya',
-      loanDate: '05.09.2025',
-      dueDate: '19.09.2025',
-      returnDate: '18.09.2025',
-      status: 'İade Edildi',
-      year: '2025–2026',
-      coverClass: 'cover-blue'
-    },
-    {
-      id: 3,
-      title: 'Kürk Mantolu Madonna',
-      author: 'Sabahattin Ali',
-      category: 'Roman',
-      loanDate: '15.03.2025',
-      dueDate: '29.03.2025',
-      returnDate: '28.03.2025',
-      status: 'İade Edildi',
-      year: '2024–2025',
-      coverClass: 'cover-green'
-    },
-    {
-      id: 4,
-      title: 'Beyaz Diş',
-      author: 'Jack London',
-      category: 'Macera',
-      loanDate: '10.02.2025',
-      dueDate: '24.02.2025',
-      returnDate: '',
-      status: 'Aktif',
-      year: '2024–2025',
-      coverClass: 'cover-brown'
-    },
-    {
-      id: 5,
-      title: 'Simyacı',
-      author: 'Paulo Coelho',
-      category: 'Roman',
-      loanDate: '12.11.2024',
-      dueDate: '26.11.2024',
-      returnDate: '25.11.2024',
-      status: 'İade Edildi',
-      year: '2024–2025',
-      coverClass: 'cover-gold'
-    },
-    {
-      id: 6,
-      title: 'Küçük Prens',
-      author: 'Antoine de Saint-Exupéry',
-      category: 'Klasik',
-      loanDate: '08.04.2024',
-      dueDate: '22.04.2024',
-      returnDate: '23.04.2024',
-      status: 'İade Edildi',
-      year: '2023–2024',
-      coverClass: 'cover-purple'
-    }
+  @Output()
+  countsChange = new EventEmitter<{ [year: string]: number }>();
+
+  loans: LoanRecord[] = [];
+  loading = true;
+  errorMessage = '';
+
+  selectedLoan: LoanRecord | null = null;
+  modalType: 'borrow' | 'review' | null = null;
+
+  selectedRating = 0;
+  reviewComment = '';
+  feedbackMessage = '';
+  borrowConfirmed = false;
+  reviewSubmitted = false;
+
+  readonly years = [
+    '2025–2026',
+    '2024–2025',
+    '2023–2024',
+    '2022–2023',
+    '2021–2022',
+    '2020–2021',
+    '2019–2020'
   ];
+
+  constructor(
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef
+  ) {}
+
+  ngOnInit(): void {
+    forkJoin({
+      books: this.http.get<Book[]>('/kitaplar.json'),
+      history: this.http.get<LoanHistory[]>('/loan-history.json')
+    }).subscribe({
+      next: ({ books, history }) => {
+        this.loans = history.map(loan => ({
+          ...loan,
+          kitap: books.find(book =>
+            book.kitapAdi.trim().toLocaleLowerCase('tr-TR') ===
+            loan.kitapAdi.trim().toLocaleLowerCase('tr-TR')
+          )
+        }));
+
+        this.emitCounts();
+        this.loading = false;
+        this.cdr.detectChanges();
+      },
+
+      error: error => {
+        console.error('Veriler yüklenemedi:', error);
+        this.errorMessage =
+          'Veriler yüklenirken bir hata oluştu.';
+        this.loading = false;
+        this.cdr.detectChanges();
+      }
+    });
+  }
+
+  private emitCounts(): void {
+    const counts: { [year: string]: number } = {
+      'Tümü': this.loans.length
+    };
+
+    for (const period of this.years) {
+      const years = period.match(/\d{4}/g);
+
+      if (!years || years.length < 2) {
+        counts[period] = 0;
+        continue;
+      }
+
+      const startYear = Number(years[0]);
+      const endYear = Number(years[1]);
+
+      counts[period] = this.loans.filter(loan => {
+        const year = Number(loan.oduncTarihi.slice(0, 4));
+        return year >= startYear && year <= endYear;
+      }).length;
+    }
+
+    this.countsChange.emit(counts);
+  }
 
   get filteredLoans(): LoanRecord[] {
     if (this.selectedYear === 'Tümü') {
       return this.loans;
     }
 
-    return this.loans.filter(
-      loan => loan.year === this.selectedYear
+    const years = this.selectedYear.match(/\d{4}/g);
+
+    if (!years || years.length < 2) {
+      return this.loans;
+    }
+
+    const startYear = Number(years[0]);
+    const endYear = Number(years[1]);
+
+    return this.loans.filter(loan => {
+      const year = Number(loan.oduncTarihi.slice(0, 4));
+      return year >= startYear && year <= endYear;
+    });
+  }
+
+  formatDate(date: string): string {
+    return new Date(date + 'T12:00:00').toLocaleDateString(
+      'tr-TR',
+      {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+      }
     );
   }
 
-  get returnedCount(): number {
-    return this.filteredLoans.filter(
-      loan => loan.status === 'İade Edildi'
-    ).length;
+  openBorrowModal(loan: LoanRecord): void {
+    this.selectedLoan = loan;
+    this.modalType = 'borrow';
+    this.feedbackMessage = '';
+    this.borrowConfirmed = false;
   }
 
-  get activeCount(): number {
-    return this.filteredLoans.filter(
-      loan => loan.status === 'Aktif'
-    ).length;
+  openReviewModal(loan: LoanRecord): void {
+    this.selectedLoan = loan;
+    this.modalType = 'review';
+    this.selectedRating = 0;
+    this.reviewComment = '';
+    this.feedbackMessage = '';
+    this.reviewSubmitted = false;
   }
 
-  showDetails(loan: LoanRecord): void {
-    alert(
-      `Kitap: ${loan.title}\n` +
-      `Yazar: ${loan.author}\n` +
-      `Durum: ${loan.status}\n` +
-      `Ödünç alma: ${loan.loanDate}\n` +
-      `Son iade: ${loan.dueDate}`
-    );
+  closeModal(): void {
+    this.modalType = null;
+    this.selectedLoan = null;
+    this.feedbackMessage = '';
   }
+
+  selectRating(rating: number): void {
+    this.selectedRating = rating;
+    this.feedbackMessage = '';
+  }
+
+  confirmBorrow(): void {
+    if (!this.selectedLoan) {
+      return;
+    }
+
+    this.borrowConfirmed = true;
+    this.feedbackMessage =
+      'Onayınız alındı. Ödünç işleminin tamamlanması için sunucu bağlantısı gereklidir.';
+  }
+
+  submitReview(): void {
+  if (this.selectedRating === 0 && !this.reviewComment.trim()) {
+    this.feedbackMessage =
+      'Lütfen yıldız puanı verin veya bir yorum yazın.';
+    return;
+  }
+
+  this.reviewSubmitted = true;
+  this.feedbackMessage =
+    'Değerlendirmeniz alındı. Kalıcı olarak kaydedilmesi için sunucu bağlantısı gereklidir.';
+}
 }
