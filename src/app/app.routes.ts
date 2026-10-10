@@ -35,6 +35,8 @@ export const routes: Routes = [
   {
     path: 'library-statistics',
     component: LibraryStatisticsPage
+  },
+  {
     path: 'borrowed-books',
     component: BorrowedBooks
   },
@@ -49,6 +51,7 @@ export const routes: Routes = [
   {
     path: 'reservation',
     component: Reservation
+  },{
     path: 'borrowed-books',
     component: BorrowedBooks
   },

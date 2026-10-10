@@ -1,0 +1,113 @@
+
+<section class="reservation-queue">
+
+  <!-- Rezervasyon filtreleri -->
+  <div class="reservation-filters">
+    @for (filter of filters; track filter.value) {
+      <button
+        type="button"
+        class="filter-button"
+        [class.active]="activeFilter === filter.value"
+        (click)="selectFilter(filter.value)"
+      >
+        {{ filter.label }} ({{ getCount(filter.value) }})
+      </button>
+    }
+  </div>
+
+  <!-- Rezervasyon kartları -->
+  <div class="reservation-list">
+
+    @for (item of filteredReservations; track item.id) {
+      <article class="reservation-card">
+
+        <!-- Sıra ve talep tarihi -->
+        <div class="reservation-card-header">
+          <span
+            class="queue-status"
+            [class.ready]="item.status === 'ready'"
+          >
+            <span class="status-icon">♜</span>
+            {{ item.queueNumber }}. {{ item.statusText }}
+          </span>
+
+          <span class="request-date">
+            Talep: {{ item.requestDate }}
+          </span>
+        </div>
+
+        <!-- Kitap bilgileri -->
+        <div class="book-information">
+
+          <div class="book-cover">
+            @if (item.coverImage) {
+              <img [src]="item.coverImage" [alt]="item.title" />
+            } @else {
+              <div class="cover-placeholder">
+                <span>ÜNİVERSİTE KÜTÜPHANESİ</span>
+                <strong>{{ item.title }}</strong>
+                <small>{{ item.author }}</small>
+              </div>
+            }
+          </div>
+
+          <div class="book-details">
+            <h3>{{ item.title }}</h3>
+            <p class="book-author">{{ item.author }}</p>
+
+            <div class="book-location">
+              <span class="search-icon">⌕</span>
+              <span>{{ item.callNumber }}</span>
+            </div>
+
+            <div class="book-location">
+              <span class="location-pin">●</span>
+              <span>{{ item.location }}</span>
+            </div>
+
+            <div class="delivery-dates">
+              <div class="date-row">
+                <span>Mevcut İade:</span>
+                <strong>{{ item.currentReturnDate }}</strong>
+              </div>
+
+              <div class="date-row">
+                <span>Tahmini Teslim:</span>
+                <strong class="estimated-date">
+                  {{ item.estimatedDeliveryDate }}
+                </strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- İşlem butonları -->
+        <div class="reservation-actions">
+          <button
+            type="button"
+            class="shelf-button"
+            (click)="showShelfLocation(item.shelfLocation)"
+          >
+            <span>♧</span>
+            Haritada Rafı Gör
+          </button>
+
+          <button
+            type="button"
+            class="cancel-button"
+            (click)="cancelReservation(item.id)"
+          >
+            İptal Et
+          </button>
+        </div>
+
+      </article>
+    } @empty {
+      <div class="empty-state">
+        Bu kategoride rezervasyon bulunmuyor.
+      </div>
+    }
+
+  </div>
+</section>

@@ -1,0 +1,17 @@
+
+<section class="reservation-status">
+
+  <div class="status-header">
+    <span class="rules-icon">◉</span>
+    <h2>REZERVASYON KURALLARI</h2>
+  </div>
+
+  <div class="status-divider"></div>
+
+  <ul class="rules-list">
+    @for (rule of rules; track $index) {
+      <li>{{ rule }}</li>
+    }
+  </ul>
+
+</section>
