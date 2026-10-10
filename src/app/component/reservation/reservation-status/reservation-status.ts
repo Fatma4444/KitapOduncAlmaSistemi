@@ -1,9 +1,14 @@
+
 import { Component } from '@angular/core';
+import reservationData from '../../../data/reservation.json';
 
 @Component({
-  imports: [],
   selector: 'app-reservation-status',
-  styleUrl: './reservation-status.css',
+  standalone: true,
+  imports: [],
   templateUrl: './reservation-status.html',
+  styleUrl: './reservation-status.css'
 })
-export class ReservationStatus {}
+export class ReservationStatus {
+  rules = reservationData.rules;
+}

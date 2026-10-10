@@ -43,5 +43,10 @@
       "coverImage": "",
       "shelfLocation": "Ziraat ve Mühendislik Fakültesi, 1. Kat, A2"
     }
+  ],
+  "rules": [
+    "Aynı anda en fazla 2 kitap için rezervasyon yapılabilir.",
+    "Kitap teslim alındığında SMS ve E-posta ile bilgilendirme yapılır.",
+    "3 gün içinde kütüphane danışmasından teslim alınmayan rezervasyonlar sıradaki kullanıcıya devredilir."
   ]
 }
