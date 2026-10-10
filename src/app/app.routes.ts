@@ -10,6 +10,7 @@ import { NewArrivalsPage } from './componentler/new-arrivals-page/new-arrivals-p
 import { BorrowedBooks } from './component/borrowed-books/borrowed-books';
 import { Reservation } from './component/reservation/reservation';
 import { MyPastPage } from './componentler/my-past-page/my-past-page';
+import { Favorite } from './component/favorite/favorite';
 
 export const routes: Routes = [
   {
@@ -58,5 +59,9 @@ export const routes: Routes = [
   {
     path: 'my-past',
     component: MyPastPage
+  },
+  {
+    path: 'favorite',
+    component: Favorite
   }
 ];
