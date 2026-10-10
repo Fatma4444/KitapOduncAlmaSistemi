@@ -1,10 +1,116 @@
-
 {
   "user": {
     "name": "Fatma Altındağ",
     "studentNumber": "220101023",
     "department": "Bilgisayar Müh.",
-    "favoriteBookCount": 6,
+    "favoriteBookCount": 5,
     "listLabel": "Kayıtlı Liste"
-  }
+  },
+  "reservationSettings": {
+    "durationHours": 3,
+    "title": "Rezervasyon Son Tarihi",
+    "message": "Rezervasyonunuzun sona ereceği tarih ve saat:"
+  },
+  "books": [
+    {
+      "id": 1,
+      "title": "Anna Karenina",
+      "authors": ["Lev Tolstoy"],
+      "year": 1878,
+      "language": "Türkçe",
+      "edition": "1. Baskı",
+      "coverImage": "/images/anna-karenina.jpg",
+      "status": "available",
+      "statusText": "Rafta Var",
+      "category": "Roman",
+      "location": "Merkez Kütüphane",
+      "shelf": "A1",
+      "isFavorite": true,
+      "reservation": {
+        "isReserved": false,
+        "reservedAt": null,
+        "reservedUntil": null
+      }
+    },
+    {
+      "id": 2,
+      "title": "Beyaz Geceler",
+      "authors": ["Fyodor Dostoyevski"],
+      "year": 1848,
+      "language": "Türkçe",
+      "edition": "1. Baskı",
+      "coverImage": "/images/beyaz-geceler.jpg",
+      "status": "available",
+      "statusText": "Rafta Var",
+      "category": "Roman",
+      "location": "Merkez Kütüphane",
+      "shelf": "A2",
+      "isFavorite": true,
+      "reservation": {
+        "isReserved": false,
+        "reservedAt": null,
+        "reservedUntil": null
+      }
+    },
+    {
+      "id": 3,
+      "title": "Çalıkuşu",
+      "authors": ["Reşat Nuri Güntekin"],
+      "year": 1922,
+      "language": "Türkçe",
+      "edition": "1. Baskı",
+      "coverImage": "/images/calikusu.jpg",
+      "status": "available",
+      "statusText": "Rafta Var",
+      "category": "Roman",
+      "location": "Merkez Kütüphane",
+      "shelf": "A3",
+      "isFavorite": true,
+      "reservation": {
+        "isReserved": false,
+        "reservedAt": null,
+        "reservedUntil": null
+      }
+    },
+    {
+      "id": 4,
+      "title": "Don Kişot",
+      "authors": ["Miguel de Cervantes"],
+      "year": 1605,
+      "language": "Türkçe",
+      "edition": "1. Baskı",
+      "coverImage": "/images/don-kisot.jpg",
+      "status": "borrowed",
+      "statusText": "Ödünçte",
+      "category": "Roman",
+      "location": "Merkez Kütüphane",
+      "shelf": "A4",
+      "isFavorite": true,
+      "reservation": {
+        "isReserved": false,
+        "reservedAt": null,
+        "reservedUntil": null
+      }
+    },
+    {
+      "id": 5,
+      "title": "Hayvan Çiftliği",
+      "authors": ["George Orwell"],
+      "year": 1945,
+      "language": "Türkçe",
+      "edition": "1. Baskı",
+      "coverImage": "/images/hayvan-ciftligi.jpg",
+      "status": "available",
+      "statusText": "Rafta Var",
+      "category": "Roman",
+      "location": "Merkez Kütüphane",
+      "shelf": "A5",
+      "isFavorite": true,
+      "reservation": {
+        "isReserved": false,
+        "reservedAt": null,
+        "reservedUntil": null
+      }
+    }
+  ]
 }
