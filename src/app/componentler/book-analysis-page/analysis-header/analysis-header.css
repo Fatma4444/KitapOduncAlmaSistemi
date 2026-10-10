@@ -1,0 +1,45 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.analysis-header {
+  width: 100%;
+  height: 90px;
+  padding: 4px 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  background-image: url('/images/analysis-header-mountains.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.header-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.university-logo {
+  width: 145px;
+  height: 80px;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .analysis-header {
+    height: 90px;
+    padding: 4px 12px;
+    background-position: center;
+  }
+
+  .university-logo {
+    width: 120px;
+    height: 80px;
+  }
+}
