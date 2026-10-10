@@ -1,0 +1,75 @@
+
+<section class="loan-list">
+  <div class="list-summary">
+    <span>
+      <strong>{{ filteredLoans.length }}</strong> kayıt bulundu
+    </span>
+
+    <span class="summary-details">
+      <span>{{ returnedCount }} iade edildi</span>
+      <span>{{ activeCount }} aktif ödünç</span>
+    </span>
+  </div>
+
+  @for (loan of filteredLoans; track loan.id) {
+    <article class="loan-card">
+      <div class="book-cover" [ngClass]="loan.coverClass">
+        <span class="cover-decoration">✦</span>
+        <span class="cover-title">{{ loan.title }}</span>
+        <span class="cover-author">{{ loan.author }}</span>
+      </div>
+
+      <div class="loan-info">
+        <div class="book-heading">
+          <div>
+            <span class="book-category">{{ loan.category }}</span>
+            <h3>{{ loan.title }}</h3>
+            <p class="book-author">{{ loan.author }}</p>
+          </div>
+
+          <span
+            class="status"
+            [class.returned]="loan.status === 'İade Edildi'"
+            [class.active]="loan.status === 'Aktif'"
+            [class.overdue]="loan.status === 'Gecikmiş'">
+            <span class="status-dot"></span>
+            {{ loan.status }}
+          </span>
+        </div>
+
+        <div class="loan-dates">
+          <div class="date-item">
+            <span class="date-label">Ödünç Alma Tarihi</span>
+            <strong>{{ loan.loanDate }}</strong>
+          </div>
+
+          <div class="date-item">
+            <span class="date-label">Son İade Tarihi</span>
+            <strong>{{ loan.dueDate }}</strong>
+          </div>
+
+          @if (loan.returnDate) {
+            <div class="date-item">
+              <span class="date-label">İade Tarihi</span>
+              <strong>{{ loan.returnDate }}</strong>
+            </div>
+          }
+        </div>
+      </div>
+
+      <button
+        class="detail-button"
+        (click)="showDetails(loan)"
+        type="button">
+        Detaylar <span>→</span>
+      </button>
+    </article>
+  } @empty {
+    <div class="empty-state">
+      <span class="empty-icon">📚</span>
+      <h3>Kayıt bulunamadı</h3>
+      <p>Seçilen dönem için ödünç alma kaydı bulunmuyor.</p>
+    </div>
+  }
+</section>
+
