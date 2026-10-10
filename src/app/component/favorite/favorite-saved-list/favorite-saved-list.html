@@ -1,0 +1,122 @@
+
+<div class="saved-list">
+
+  <div class="search-box">
+    <span>⌕</span>
+    <input
+      type="text"
+      placeholder="Favori kitaplarında ara..."
+      [(ngModel)]="searchText"
+    />
+  </div>
+
+  <div class="filter-list">
+    <button
+      [class.active]="activeFilter === 'all'"
+      (click)="activeFilter = 'all'">
+      Tümü ({{ books.length }})
+    </button>
+
+    <button
+      [class.active]="activeFilter === 'available'"
+      (click)="activeFilter = 'available'">
+      Rafta Olanlar
+    </button>
+
+    <button
+      [class.active]="activeFilter === 'borrowed'"
+      (click)="activeFilter = 'borrowed'">
+      Ödünçte
+    </button>
+  </div>
+
+  <div class="book-list">
+
+    <div class="book-card" *ngFor="let book of filteredBooks">
+
+      <div class="book-main">
+
+        <img
+          class="book-cover"
+          [src]="book.coverImage"
+          [alt]="book.title"
+        />
+
+        <div class="book-info">
+          <h3>{{ book.title }}</h3>
+
+          <p class="author">
+            {{ book.authors.join(', ') }}
+          </p>
+
+          <p class="book-details">
+            {{ book.year }} · {{ book.language }} · {{ book.edition }}
+          </p>
+
+          <span
+            class="status"
+            [class.available]="book.status === 'available'"
+            [class.borrowed]="book.status === 'borrowed'">
+            {{ book.statusText }}
+          </span>
+        </div>
+
+        <button
+          class="favorite-button"
+          (click)="removeFavorite(book.id)"
+          aria-label="Favorilerden çıkar">
+          ♥
+        </button>
+
+      </div>
+
+      <div class="location">
+        <span>📍</span>
+        {{ book.location }} · Raf: {{ book.shelf }}
+      </div>
+
+      <div
+        class="reservation-timer"
+        *ngIf="book.reservation.isReserved && book.reservation.reservedUntil">
+
+        <span>◷</span>
+
+        <div>
+          <strong>{{ reservationSettings.title }}</strong>
+          <p>{{ getReservationEndTime(book) }}</p>
+        </div>
+
+      </div>
+
+      <div class="book-actions">
+
+        <button
+          class="reserve-button"
+          *ngIf="!book.reservation.isReserved"
+          [disabled]="book.status !== 'available'"
+          (click)="reserveBook(book)">
+          Rezerve Et
+        </button>
+
+        <button
+          class="reserve-button reserved"
+          *ngIf="book.reservation.isReserved">
+          Rezerve Edildi
+        </button>
+
+        <button
+          class="map-button"
+          (click)="showOnMap(book)">
+          Haritada Gör
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="empty-state" *ngIf="filteredBooks.length === 0">
+      <p>Aradığın kriterlere uygun kitap bulunamadı.</p>
+    </div>
+
+  </div>
+</div>
