@@ -11,6 +11,8 @@ import { BorrowedBooks } from './component/borrowed-books/borrowed-books';
 import { Reservation } from './component/reservation/reservation';
 import { MyPastPage } from './componentler/my-past-page/my-past-page';
 import { Favorite } from './component/favorite/favorite';
+import { BookAnalysisPage } from './componentler/book-analysis-page/book-analysis-page';
+
 
 export const routes: Routes = [
   {
@@ -63,5 +65,9 @@ export const routes: Routes = [
   {
     path: 'favorite',
     component: Favorite
+  },
+  {
+    path: 'book-analysis',
+    component: BookAnalysisPage
   }
 ];
