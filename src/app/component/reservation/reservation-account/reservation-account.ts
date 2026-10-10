@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import accountData from '../../../data/reservation.json';
 
 @Component({
-  imports: [],
   selector: 'app-reservation-account',
-  styleUrl: './reservation-account.css',
+  standalone: true,
+  imports: [],
   templateUrl: './reservation-account.html',
+  styleUrl: './reservation-account.css'
 })
-export class ReservationAccount {}
+export class ReservationAccount {
+  account = accountData;
+}

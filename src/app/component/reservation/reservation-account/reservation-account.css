@@ -1,0 +1,200 @@
+
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.reservation-account {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 12px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(35, 48, 65, 0.06);
+}
+
+/* Öğrenci bilgileri */
+
+.account-header {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.account-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #fff0cc;
+  border-radius: 10px;
+  background: #fffaf0;
+  color: #e7a52d;
+  font-size: 17px;
+}
+
+.student-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  gap: 2px;
+}
+
+.label {
+  color: #8b96a8;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.student-info strong {
+  color: #344054;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.student-number {
+  color: #8c9bb0;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+/* Kalan rezervasyon hakkı */
+
+.reservation-right {
+  flex-shrink: 0;
+  width: 64px;
+  padding: 5px 6px;
+  box-sizing: border-box;
+  border: 1px solid #a7efd1;
+  border-radius: 18px;
+  background: #effdf6;
+  color: #36b987;
+  font-size: 11px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/* Aktif rezervasyon durumu */
+
+.reservation-status {
+  margin-top: 15px;
+}
+
+.status-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.status-text span {
+  color: #69778b;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.status-text strong {
+  color: #a21d36;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #edf0f4;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  background: #92172f;
+  transition: width 0.3s ease;
+}
+
+/* Bilgilendirme kutusu */
+
+.notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 12px;
+  padding: 11px 9px;
+  border: 1px solid #ffe5a0;
+  border-radius: 9px;
+  background: #fffaf0;
+}
+
+.warning-icon {
+  flex-shrink: 0;
+  color: #d8a62e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.notification p {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: #956b35;
+  font-size: 11px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+.notification p strong {
+  color: #805523;
+  font-weight: 600;
+}
+
+/* Küçük telefon ekranları */
+
+@media (max-width: 350px) {
+  .reservation-account {
+    padding: 11px 9px;
+  }
+
+  .account-header {
+    gap: 7px;
+  }
+
+  .label {
+    font-size: 11px;
+  }
+
+  .student-info strong {
+    font-size: 12px;
+  }
+
+  .student-number {
+    font-size: 11px;
+  }
+
+  .reservation-right {
+    width: 58px;
+    font-size: 10px;
+  }
+
+  .status-text span,
+  .status-text strong {
+    font-size: 11px;
+  }
+
+  .notification {
+    padding: 9px 7px;
+  }
+
+  .notification p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}

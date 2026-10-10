@@ -1,1 +1,54 @@
-<p>reservation-account works!</p>
+
+<section class="reservation-account">
+
+  <div class="account-header">
+    <div class="account-icon">
+      <span>▣</span>
+    </div>
+
+    <div class="student-info">
+      <span class="label">Öğrenci Hesabı</span>
+      <strong>{{ account.student.name }} ·</strong>
+      <span class="student-number">
+        {{ account.student.studentNumber }}
+      </span>
+    </div>
+
+    <div class="reservation-right">
+      {{ account.student.remainingReservationRight }} Hak
+      Kaldı
+    </div>
+  </div>
+
+  <div class="reservation-status">
+    <div class="status-text">
+      <span>Aktif Rezervasyon Durumu</span>
+      <strong>
+        {{ account.reservation.activeCount }} /
+        {{ account.reservation.maxCount }} Kitap
+      </strong>
+    </div>
+
+    <div class="progress-bar">
+      <div
+        class="progress"
+        [style.width.%]="
+          account.reservation.maxCount > 0
+            ? account.reservation.activeCount /
+              account.reservation.maxCount * 100
+            : 0
+        ">
+      </div>
+    </div>
+  </div>
+
+  <div class="notification">
+    <span class="warning-icon">⚠</span>
+
+    <p>
+      <strong>{{ account.notification.title }}</strong>
+      {{ account.notification.message }}
+    </p>
+  </div>
+
+</section>
