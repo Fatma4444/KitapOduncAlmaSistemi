@@ -1,9 +1,14 @@
+
 import { Component } from '@angular/core';
+import favoritData from '../../../data/favorite.json';
 
 @Component({
-  imports: [],
   selector: 'app-favorite-situation',
-  styleUrl: './favorite-situation.css',
+  standalone: true,
+  imports: [],
   templateUrl: './favorite-situation.html',
+  styleUrl: './favorite-situation.css'
 })
-export class FavoriteSituation {}
+export class FavoriteSituation {
+  user = favoritData.user;
+}
