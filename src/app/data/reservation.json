@@ -1,0 +1,47 @@
+
+{
+  "student": {
+    "name": "Fatma Altındağ",
+    "studentNumber": "220101023",
+    "remainingReservationRight": 1
+  },
+  "reservation": {
+    "activeCount": 1,
+    "maxCount": 2
+  },
+  "notification": {
+    "title": "Bilgilendirme:",
+    "message": "Rezerve ettiğiniz kitap kütüphaneye iade edildiğinde adınıza yarım gün süreyle ayrılır. Bildirimleri açık tutmayı unutmayınız."
+  },
+  "filters": [
+    {
+      "label": "Tümü",
+      "value": "all"
+    },
+    {
+      "label": "Hazır Olanlar",
+      "value": "ready"
+    },
+    {
+      "label": "Sırada Bekleyenler",
+      "value": "waiting"
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "status": "waiting",
+      "queueNumber": 1,
+      "statusText": "Sıradasınız (Teslim Bekleniyor)",
+      "requestDate": "20 Eki 2024",
+      "title": "Yapay Zeka: Temel Kavramlar",
+      "author": "Prof. Dr. Ahmet Yılmaz",
+      "callNumber": "QA 76.87 .Y71 2023",
+      "location": "Ziraat & Müh. (1. Kat - A2)",
+      "currentReturnDate": "28 Ekim 2024",
+      "estimatedDeliveryDate": "29 Ekim 2024",
+      "coverImage": "",
+      "shelfLocation": "Ziraat ve Mühendislik Fakültesi, 1. Kat, A2"
+    }
+  ]
+}

@@ -8,6 +8,7 @@ import { TopicDistribution } from './component/topic-distribution/topic-distribu
 import { Profile } from './component/profile/profile';
 import { NewArrivalsPage } from './componentler/new-arrivals-page/new-arrivals-page';
 import { BorrowedBooks } from './component/borrowed-books/borrowed-books';
+import { Reservation } from './component/reservation/reservation';
 import { MyPastPage } from './componentler/my-past-page/my-past-page';
 
 export const routes: Routes = [
@@ -46,6 +47,8 @@ export const routes: Routes = [
     component: NewArrivalsPage
   },
   {
+    path: 'reservation',
+    component: Reservation
     path: 'borrowed-books',
     component: BorrowedBooks
   },
