@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   imports: [],
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './map-header.css',
   templateUrl: './map-header.html',
 })
-export class MapHeader {}
+export class MapHeader {
+  private location = inject(Location);
+
+  goBack(): void {
+    this.location.back();
+  }
+}

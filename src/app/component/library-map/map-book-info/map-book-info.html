@@ -1,1 +1,26 @@
-<p>map-book-info works!</p>
+<section class="book-info-sheet">
+    <div class="sheet-handle"></div>
+
+    <div class="book-info">
+        <img class="book-cover" [src]="book.coverImage" [alt]="book.title" />
+
+        <div class="book-details">
+            <h2 class="book-title">{{ book.title }}</h2>
+            <p class="book-authors">{{ book.authors.join(', ') }}</p>
+
+            <ul class="info-list">
+                @for (row of infoRows; track row.icon) {
+                <li class="info-row">
+                    <span class="info-icon">{{ row.icon }}</span>
+                    <span>
+                        @if (row.label) {
+                        <span class="info-label">{{ row.label }}:</span>
+                        }
+                        {{ row.value }}
+                    </span>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>
+</section>
