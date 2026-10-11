@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -9,8 +10,15 @@ import { Location } from '@angular/common';
 })
 export class MapHeader {
   private location = inject(Location);
+  private router = inject(Router);
 
   goBack(): void {
-    this.location.back();
+    const cameFromInsideApp = this.router.lastSuccessfulNavigation()?.previousNavigation;
+
+    if (cameFromInsideApp) {
+      this.location.back();
+    } else {
+      this.router.navigateByUrl('/');
+    }
   }
 }
