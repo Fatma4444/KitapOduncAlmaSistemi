@@ -1,17 +1,5 @@
-import { Component } from '@angular/core';
-
-interface MapBook {
-  title: string;
-  authors: string[];
-  coverImage: string;
-  faculty: string;
-  department: string;
-  floor: string;
-  shelf: string;
-  bookcase: string;
-  shelfNumber: number;
-  inventoryNumber: string;
-}
+import { Component, computed, input } from '@angular/core';
+import { MapBook } from '../../../services/library-map-service';
 
 interface InfoRow {
   icon: string;
@@ -26,24 +14,17 @@ interface InfoRow {
   templateUrl: './map-book-info.html',
 })
 export class MapBookInfo {
-  book: MapBook = {
-    title: 'Makine Öğrenmesi',
-    authors: ['Dr. Elif Kaya', 'Dr. Mehmet Demir'],
-    coverImage: '/images/images.jpg',
-    faculty: 'Mühendislik Fakültesi',
-    department: 'Bilgisayar Mühendisliği',
-    floor: '2. Kat',
-    shelf: 'B3',
-    bookcase: 'B (Bilgisayar Mühendisliği)',
-    shelfNumber: 3,
-    inventoryNumber: '0045782',
-  };
+  book = input.required<MapBook>();
 
-  infoRows: InfoRow[] = [
-    { icon: '🏛', label: 'Fakülte', value: this.book.faculty },
-    { icon: '🎓', label: 'Bölüm', value: this.book.department },
-    { icon: '📚', label: '', value: `${this.book.floor} - ${this.book.shelf} Rafı` },
-    { icon: '📍', label: 'Kitaplık', value: `${this.book.bookcase} Raf: ${this.book.shelfNumber}` },
-    { icon: '🏷', label: 'Demirbaş No', value: this.book.inventoryNumber },
-  ];
+  infoRows = computed<InfoRow[]>(() => {
+    const book = this.book();
+
+    return [
+      { icon: '🏛', label: 'Fakülte', value: book.faculty },
+      { icon: '🎓', label: 'Bölüm', value: book.department },
+      { icon: '📚', label: '', value: `${book.floor} - ${book.shelf} Rafı` },
+      { icon: '📍', label: 'Kitaplık', value: `${book.bookcase} Raf: ${book.shelfNumber}` },
+      { icon: '🏷', label: 'Demirbaş No', value: book.inventoryNumber },
+    ];
+  });
 }

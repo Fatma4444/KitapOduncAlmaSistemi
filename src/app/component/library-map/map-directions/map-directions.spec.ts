@@ -12,6 +12,9 @@ describe('MapDirections', () => {
 
     fixture = TestBed.createComponent(MapDirections);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('steps', [
+      { text: 'Test adımı', distanceInMeters: 5 },
+    ]);
     await fixture.whenStable();
   });
 

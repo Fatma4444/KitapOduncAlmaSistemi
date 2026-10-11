@@ -12,6 +12,18 @@ describe('MapBookInfo', () => {
 
     fixture = TestBed.createComponent(MapBookInfo);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('book', {
+      title: 'Test Kitabı',
+      authors: ['Test Yazar'],
+      coverImage: '',
+      faculty: 'Test Fakültesi',
+      department: 'Test Bölümü',
+      floor: '1. Kat',
+      shelf: 'A1',
+      bookcase: 'A',
+      shelfNumber: 1,
+      inventoryNumber: '0000001',
+    });
     await fixture.whenStable();
   });
 

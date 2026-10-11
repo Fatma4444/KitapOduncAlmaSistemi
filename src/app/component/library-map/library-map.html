@@ -1,6 +1,11 @@
 <div class="library-map-page">
     <app-map-header></app-map-header>
     <app-map-view></app-map-view>
-    <app-map-book-info></app-map-book-info>
-    <app-map-directions></app-map-directions>
+
+    @if (mapInfo) {
+    <app-map-book-info [book]="mapInfo.book"></app-map-book-info>
+    <app-map-directions [steps]="mapInfo.steps"></app-map-directions>
+    } @else {
+    <p class="not-found">Bu kitabın konum bilgisi bulunamadı.</p>
+    }
 </div>

@@ -1,24 +1,21 @@
-import { Component, inject } from '@angular/core';
-import { Location } from '@angular/common';
-import { Router } from '@angular/router';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MapHeader } from './map-header';
 
-@Component({
-  imports: [],
-  selector: 'app-map-header',
-  styleUrl: './map-header.css',
-  templateUrl: './map-header.html',
-})
-export class MapHeader {
-  private location = inject(Location);
-  private router = inject(Router);
+describe('MapHeader', () => {
+  let component: MapHeader;
+  let fixture: ComponentFixture<MapHeader>;
 
-  goBack(): void {
-    const cameFromInsideApp = this.router.lastSuccessfulNavigation()?.previousNavigation;
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [MapHeader],
+    }).compileComponents();
 
-    if (cameFromInsideApp) {
-      this.location.back();
-    } else {
-      this.router.navigateByUrl('/');
-    }
-  }
-}
+    fixture = TestBed.createComponent(MapHeader);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
