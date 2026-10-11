@@ -1,1 +1,13 @@
-<p>map-directions works!</p>
+<section class="directions">
+    <h3 class="directions-title">Yol Tarifi</h3>
+
+    <ol class="step-list">
+        @for (step of steps; track $index) {
+        <li class="step" [class.step-active]="$first">
+            <span class="step-number">{{ $index + 1 }}</span>
+            <span class="step-text">{{ step.text }}</span>
+            <span class="step-distance">{{ step.distanceInMeters }} metre</span>
+        </li>
+        }
+    </ol>
+</section>
