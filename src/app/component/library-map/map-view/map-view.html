@@ -1,1 +1,14 @@
-<p>map-view works!</p>
+<section class="map-view">
+    <div class="map-placeholder">
+        {{ floorName() }} haritası
+    </div>
+
+    <div class="floor-selector" role="group" aria-label="Kat seçimi">
+        @for (floor of floors; track floor) {
+        <button type="button" class="floor-button" [class.floor-button-active]="selectedFloor() === floor"
+            [attr.aria-pressed]="selectedFloor() === floor" (click)="selectFloor(floor)">
+            {{ floor }}
+        </button>
+        }
+    </div>
+</section>
