@@ -1,0 +1,51 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+.map-view {
+    position: relative;
+    height: 300px;
+    background: #e9ebef;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.map-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.floor-selector {
+    position: absolute;
+    top: 30px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px 4px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.floor-button {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: #344054;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.floor-button-active {
+    background: #85233b;
+    color: #ffffff;
+}

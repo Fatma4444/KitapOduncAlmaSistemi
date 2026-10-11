@@ -12,7 +12,7 @@ import { Reservation } from './component/reservation/reservation';
 import { MyPastPage } from './componentler/my-past-page/my-past-page';
 import { Favorite } from './component/favorite/favorite';
 import { BookAnalysisPage } from './componentler/book-analysis-page/book-analysis-page';
-
+import { LibraryMap } from './component/library-map/library-map';
 
 export const routes: Routes = [
   {
@@ -44,8 +44,8 @@ export const routes: Routes = [
     component: BorrowedBooks
   },
   {
-  path: 'library-statistics',
-  component: LibraryStatisticsPage
+    path: 'library-statistics',
+    component: LibraryStatisticsPage
   },
   {
     path: 'new-arrivals',
@@ -54,7 +54,7 @@ export const routes: Routes = [
   {
     path: 'reservation',
     component: Reservation
-  },{
+  }, {
     path: 'borrowed-books',
     component: BorrowedBooks
   },
@@ -69,5 +69,9 @@ export const routes: Routes = [
   {
     path: 'book-analysis',
     component: BookAnalysisPage
+  },
+  {
+    path: 'map',
+    component: LibraryMap
   }
 ];
