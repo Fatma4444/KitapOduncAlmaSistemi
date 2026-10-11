@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, input, linkedSignal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -7,9 +7,11 @@ import { Component, computed, signal } from '@angular/core';
   templateUrl: './map-view.html',
 })
 export class MapView {
+  initialFloor = input('Z');
+
   floors = ['3', '2', '1', 'Z'];
 
-  selectedFloor = signal('2');
+  selectedFloor = linkedSignal(() => this.initialFloor());
 
   floorName = computed(() =>
     this.selectedFloor() === 'Z' ? 'Zemin Kat' : `${this.selectedFloor()}. Kat`

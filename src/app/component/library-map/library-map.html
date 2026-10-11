@@ -1,11 +1,16 @@
 <div class="library-map-page">
     <app-map-header></app-map-header>
-    <app-map-view></app-map-view>
 
-    @if (mapInfo) {
-    <app-map-book-info [book]="mapInfo.book"></app-map-book-info>
-    <app-map-directions [steps]="mapInfo.steps"></app-map-directions>
+    <app-map-view [initialFloor]="mapInfo()?.floorId ?? 'Z'"></app-map-view>
+
+    @if (mapInfo(); as info) {
+    <app-map-book-info [book]="info.book"></app-map-book-info>
+    <app-map-directions [steps]="info.steps"></app-map-directions>
+    } @else if (bookId() === null) {
+    <p class="map-message">
+        Bir kitabın yerini görmek için kitap sayfalarındaki "Haritada Gör" butonunu kullanın.
+    </p>
     } @else {
-    <p class="not-found">Bu kitabın konum bilgisi bulunamadı.</p>
+    <p class="map-message">Bu kitabın konum bilgisi bulunamadı.</p>
     }
 </div>

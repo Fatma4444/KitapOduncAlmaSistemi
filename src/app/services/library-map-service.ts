@@ -20,6 +20,7 @@ export interface DirectionStep {
 
 export interface BookMapInfo {
     bookId: number;
+    floorId: string;
     book: MapBook;
     steps: DirectionStep[];
 }
@@ -28,6 +29,7 @@ export interface BookMapInfo {
 const MOCK_MAP_DATA: BookMapInfo[] = [
     {
         bookId: 1,
+        floorId: '2',
         book: {
             title: 'Makine Öğrenmesi',
             authors: ['Dr. Elif Kaya', 'Dr. Mehmet Demir'],
@@ -49,6 +51,7 @@ const MOCK_MAP_DATA: BookMapInfo[] = [
     },
     {
         bookId: 2,
+        floorId: 'Z',
         book: {
             title: 'Anna Karenina',
             authors: ['Lev Tolstoy'],
