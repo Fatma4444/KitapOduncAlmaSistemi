@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './borrowed-books-header.css',
   templateUrl: './borrowed-books-header.html',
 })
-export class BorrowedBooksHeader {}
+export class BorrowedBooksHeader {
+   
+  constructor(private router:Router){}
+  
+  gEriDon(){
+      this.router.navigate(['/profile']);
+  }
+}
