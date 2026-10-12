@@ -22,5 +22,8 @@ export class QuickAccess {
   quickAccess4(){
     this.router.navigate(['/library-statistics'])
   }
+  quickAccess5(){
+    this.router.navigate(['/topic-distribution'])
+  }
 
 }

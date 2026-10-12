@@ -37,7 +37,8 @@
 .quick-access-new,
 .quick-acces-popular,
 .quick-access-suggestions,
-.quick-access-statistics {
+.quick-access-statistics,
+.quick-access-topic {
     width: 100%;
     min-width: 0;
     height: 50px;
@@ -57,7 +58,8 @@
 .quick-access-new-icon,
 .quick-access-popular-icon,
 .quick-access-suggestions-icon,
-.quick-access-statistics-icon {
+.quick-access-statistics-icon,
+.quick-access-topic-icon {
     width: 24px;
     height: 27px;
     border-radius: 6px;
@@ -72,7 +74,8 @@
 .quick-access-new-icon,
 .quick-access-popular-icon,
 .quick-access-suggestions-icon,
-.quick-access-statistics-icon {
+.quick-access-statistics-icon,
+.quick-access-topic-icon {
     background-color: #ffffff;
 }
 
@@ -80,7 +83,8 @@
 .quick-access-new span,
 .quick-acces-popular span,
 .quick-access-suggestions span,
-.quick-access-statistics span {
+.quick-access-statistics span,
+.quick-access-topic span {
     font-size: 10px;
     line-height: 11px;
     color: #040404;
