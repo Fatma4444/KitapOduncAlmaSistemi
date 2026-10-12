@@ -12,7 +12,13 @@
       <h3>{{ kitapAdi() }}</h3>
 
       <!-- Bookmark -->
-      <span class="bookmark">♡</span>
+      <span
+        class="bookmark"
+        [class.favorited]="favoriteService.favoriMi(kitapAdi())"
+        (click)="favoriyeEkle($event)"
+      >
+      {{ favoriteService.favoriMi(kitapAdi()) ? '♥' : '♡' }}
+      </span>
     </div>
 
     <p class="author">

@@ -1,6 +1,7 @@
+
 import { Component, input } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { FavoriteService } from '../../../../services/favorite.service';
 @Component({
   imports: [],
   selector: 'app-book-card',
@@ -16,9 +17,26 @@ export class BookCard {
   fakulte = input<string>('');
   kitapFoto = input<string>('');
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    public favoriteService: FavoriteService
+  ) {}
 
   kitapDetayinaGit(): void {
-  this.router.navigate(['/book-detail']);
+    this.router.navigate(['/book-detail']);
+  }
+
+  favoriyeEkle(event: MouseEvent): void {
+    event.stopPropagation();
+
+    this.favoriteService.favoriyeEkleVeyaCikar({
+      kitapAdi: this.kitapAdi(),
+      yazar: this.yazar(),
+      basimYili: this.basimYili(),
+      dil: this.dil(),
+      raftaMi: this.raftaMi(),
+      fakulte: this.fakulte(),
+      kitapFoto: this.kitapFoto(),
+    });
   }
 }
