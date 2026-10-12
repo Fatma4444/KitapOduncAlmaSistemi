@@ -1,5 +1,5 @@
+
 import { Component } from '@angular/core';
-import profileData from '../profile.json';
 
 interface MembershipInfo {
   title: string;
@@ -16,6 +16,10 @@ interface MembershipInfo {
 })
 export class MembershipStatus {
 
-  membership: MembershipInfo = profileData.membershipStatus;
+  membership: MembershipInfo = {
+    title: 'Üyelik Bilgilerim',
+    status: 'Aktif',
+    active: true
+  };
 
 }

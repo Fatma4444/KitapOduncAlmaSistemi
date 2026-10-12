@@ -1,29 +1,34 @@
+
 <div class="profile-categories">
 
-  @for (category of categories; track category.title) {
+  <button type="button" class="category-card" (click)="borrowedBooks()">
+    <span class="category-left">
+      <span class="category-icon">📚</span>
+      <span class="category-title">Ödünçteki Kitaplar</span>
+    </span>
+  </button>
 
-    <div class="category-card">
+  <button type="button" class="category-card" (click)="reservation()">
+    <span class="category-left">
+      <span class="category-icon">🔍</span>
+      <span class="category-title">Rezervasyonlarım</span>
+    </span>
+  </button>
 
-      <div class="category-left">
+  <button type="button" class="category-card" (click)="myPastPage()">
+    <span class="category-left">
+      <span class="category-icon">📄</span>
+      <span class="category-title">Geçmişim</span>
+    </span>
+  </button>
 
-        <span class="category-icon">
-          {{ category.icon }}
-        </span>
+  <button type="button" class="category-card" (click)="favorite()">
+    <span class="category-left">
+      <span class="category-icon">♡</span>
+      <span class="category-title">Favorilerim</span>
+    </span>
+  </button>
 
-        <span class="category-title">
-          {{ category.title }}
-        </span>
-
-      </div>
-
-      @if (category.count !== null) {
-        <span class="category-count">
-          {{ category.count }}
-        </span>
-      }
-
-    </div>
-
-  }
+  
 
 </div>

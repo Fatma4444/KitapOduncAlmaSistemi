@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
-import profileData from '../profile.json';
-
-interface ProfileCategory {
-  title: string;
-  count: number | null;
-  icon: string;
-}
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile-categories',
@@ -15,7 +9,17 @@ interface ProfileCategory {
   styleUrl: './profile-categories.css'
 })
 export class ProfileCategories {
-
-  categories: ProfileCategory[] = profileData.categories;
-
+   constructor(private router:Router){}
+  borrowedBooks(){
+     this.router.navigate(['/borrowed-books']);
+  }
+  reservation(){
+    this.router.navigate(['/reservation']);
+  }
+  myPastPage(){
+    this.router.navigate(['/my-past']);
+  }
+  favorite(){
+    this.router.navigate(['/favorite']);
+  }
 }
