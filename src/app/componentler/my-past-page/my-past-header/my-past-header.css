@@ -16,7 +16,7 @@
   transform: translateX(-50%);
   margin: 0;
   color: #292929;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -37,10 +37,10 @@
 
 .back-icon {
   display: block;
-  font-size: 42px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1;
-  transform: scaleY(1.15);
+  transform: scaleY(1.05);
 }
 
 .back-button:hover {
