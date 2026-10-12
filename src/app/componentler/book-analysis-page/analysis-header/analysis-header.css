@@ -1,3 +1,4 @@
+
 :host {
   display: block;
   width: 100%;
@@ -21,6 +22,29 @@
   height: 100%;
   display: flex;
   align-items: center;
+  gap: 16px;
+}
+
+.back-button {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #8b1e2d;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.back-button:hover {
+  background: transparent;
+  color: #5f1420;
 }
 
 .university-logo {
@@ -36,6 +60,15 @@
     height: 90px;
     padding: 4px 12px;
     background-position: center;
+  }
+
+  .header-content {
+    gap: 10px;
+  }
+
+  .back-button {
+    padding: 7px 10px;
+    font-size: 26px;
   }
 
   .university-logo {

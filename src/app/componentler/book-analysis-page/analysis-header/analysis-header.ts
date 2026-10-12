@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './analysis-header.css',
   templateUrl: './analysis-header.html',
 })
-export class AnalysisHeader {}
+export class AnalysisHeader {
+
+  constructor(private router: Router) {}
+
+  homePageGit(): void {
+   this.router.navigate(['/']);
+}
+}
