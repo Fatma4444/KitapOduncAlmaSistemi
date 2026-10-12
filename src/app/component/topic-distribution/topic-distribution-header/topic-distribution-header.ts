@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './topic-distribution-header.css',
   templateUrl: './topic-distribution-header.html',
 })
-export class TopicDistributionHeader {}
+export class TopicDistributionHeader {
+   constructor(private router:Router){}
+  geriDON(){
+      this.router.navigate(['/']);
+  }
+}

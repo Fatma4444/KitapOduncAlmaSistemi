@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-catalog-header',
@@ -7,9 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './catalog-header.css',
 })
 export class CatalogHeader {
+  constructor(private router:Router){}
 
-  geriDon(): void {
-  window.history.back();
+  geriDon(){
+     this.router.navigate(['/']);
+  }
   }
 
-}
+
