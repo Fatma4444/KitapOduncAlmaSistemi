@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-past-header',
@@ -10,9 +10,9 @@ import { Location } from '@angular/common';
   styleUrl: './my-past-header.css',
 })
 export class MyPastHeader {
-  constructor(private location: Location) {}
+  constructor(private router: Router) {}
 
   goBack(): void {
-    this.location.back();
-  }
+  this.router.navigateByUrl('/profile');
+ }
 }

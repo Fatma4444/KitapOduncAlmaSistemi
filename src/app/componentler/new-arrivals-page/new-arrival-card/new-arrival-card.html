@@ -1,4 +1,5 @@
-<div class="book-card">
+
+<div class="book-card" (click)="bilgileriGoster()">
 
   <div class="book-cover">
     <img [src]="book.kitapFoto" [alt]="book.kitapAdi">
@@ -6,10 +7,37 @@
 
   <div class="book-info">
     <span class="category">{{ book.tur }}</span>
-
     <h3>{{ book.kitapAdi }}</h3>
-
     <p>{{ book.basimYili }}</p>
   </div>
 
 </div>
+
+@if (modalAcik) {
+  <div class="modal-overlay" (click)="pencereyiKapat()">
+    <div class="book-modal" (click)="$event.stopPropagation()">
+
+      <button
+        class="close-button"
+        (click)="pencereyiKapat()">
+        ×
+      </button>
+
+      <img
+        class="modal-cover"
+        [src]="book.kitapFoto"
+        [alt]="book.kitapAdi">
+
+      <h2>{{ book.kitapAdi }}</h2>
+
+      <p><strong>Tür:</strong> {{ book.tur }}</p>
+      <p><strong>Yazar:</strong> {{ book.yazar || 'Belirtilmemiş' }}</p>
+      <p><strong>Basım yılı:</strong> {{ book.basimYili }}</p>
+
+      @if (book.aciklama) {
+        <p class="book-description">{{ book.aciklama }}</p>
+      }
+
+    </div>
+  </div>
+}

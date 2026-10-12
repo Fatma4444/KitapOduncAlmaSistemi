@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -14,4 +15,10 @@ export class BookCard {
   raftaMi = input<boolean>(false);
   fakulte = input<string>('');
   kitapFoto = input<string>('');
+
+  constructor(private router: Router) {}
+
+  kitapDetayinaGit(): void {
+  this.router.navigate(['/book-detail']);
+  }
 }

@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './new-arrivals-header.css',
   templateUrl: './new-arrivals-header.html',
 })
-export class NewArrivalsHeader {}
+export class NewArrivalsHeader {
+
+  geriDon(): void {
+  window.history.back();
+  }
+}

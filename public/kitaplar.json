@@ -1,3 +1,4 @@
+
 [
   {
     "kitapAdi": "Suç ve Ceza",
@@ -8,7 +9,8 @@
     "fakulte": "Mühendislik Fakültesi",
     "kitapFoto": "images/suc-ve-ceza.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2024-03-15"
+    "eklenmeTarihi": "2024-03-15",
+    "aciklama": "Raskolnikov adlı genç bir öğrencinin işlediği cinayet sonrasında yaşadığı vicdan azabını ve iç çatışmalarını anlatır. Suç, adalet, ahlak ve insan psikolojisi üzerine derin bir sorgulama sunar."
   },
   {
     "kitapAdi": "Kürk Mantolu Madonna",
@@ -19,7 +21,8 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/kurk-mantolu-madonna.jpg",
     "tur": "E-Kitap",
-    "eklenmeTarihi": "2026-02-10"
+    "eklenmeTarihi": "2026-02-10",
+    "aciklama": "Raif Efendi'nin geçmişinde yaşadığı derin aşkı ve iç dünyasını keşfeden roman, yalnızlık, anlaşılmama ve insan ilişkileri temalarını işler. Sessiz bir yaşamın ardında saklı kalan duyguları gözler önüne serer."
   },
   {
     "kitapAdi": "1984",
@@ -30,7 +33,8 @@
     "fakulte": "İktisadi ve İdari Bilimler Fakültesi",
     "kitapFoto": "images/1984.jpg",
     "tur": "Tez",
-    "eklenmeTarihi": "2026-10-08"
+    "eklenmeTarihi": "2026-10-08",
+    "aciklama": "Bireylerin sürekli gözetim altında tutulduğu totaliter bir dünyada Winston Smith'in gerçekleri sorgulama çabasını anlatır. Özgürlük, propaganda, düşünce kontrolü ve iktidarın sınırları üzerine düşündürür."
   },
   {
     "kitapAdi": "Sefiller",
@@ -41,7 +45,8 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/sefiller.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2025-06-21"
+    "eklenmeTarihi": "2025-06-21",
+    "aciklama": "Jean Valjean'ın geçmişinden kurtulup yeni bir hayat kurma mücadelesini anlatır. Yoksulluk, adalet, merhamet, fedakârlık ve toplumsal eşitsizlik gibi konuları etkileyici karakterler üzerinden işler."
   },
   {
     "kitapAdi": "Beyaz Geceler",
@@ -52,7 +57,8 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/beyaz-geceler.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2026-10-09"
+    "eklenmeTarihi": "2026-10-09",
+    "aciklama": "Yalnız bir anlatıcının Petersburg'da karşılaştığı genç bir kadınla geçirdiği birkaç geceyi konu alır. Hayaller, karşılıksız aşk, yalnızlık ve umut üzerine duygusal bir hikâyedir."
   },
   {
     "kitapAdi": "Simyacı",
@@ -63,7 +69,8 @@
     "fakulte": "Mühendislik Fakültesi",
     "kitapFoto": "images/simyaci.jpg",
     "tur": "E-Kitap",
-    "eklenmeTarihi": "2025-11-05"
+    "eklenmeTarihi": "2025-11-05",
+    "aciklama": "Endülüslü çoban Santiago'nun hazinesini bulmak için çıktığı yolculuğu anlatır. Kişisel hayallerin peşinden gitmek, cesaret, kendini tanımak ve hayatın işaretlerini fark etmek üzerine ilham verici bir öyküdür."
   },
   {
     "kitapAdi": "Dönüşüm",
@@ -74,7 +81,8 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/donusum.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2024-09-18"
+    "eklenmeTarihi": "2024-09-18",
+    "aciklama": "Gregor Samsa'nın bir sabah böceğe dönüşmüş olarak uyanmasıyla başlayan hikâye, bireyin ailesi ve toplum içindeki yerini sorgular. Yabancılaşma, yalnızlık, sorumluluk ve insanın değeri üzerine düşündürür."
   },
   {
     "kitapAdi": "İnce Memed",
@@ -85,7 +93,8 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/ince-memed.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2026-08-12"
+    "eklenmeTarihi": "2026-08-12",
+    "aciklama": "Çukurova'da baskı ve adaletsizlik karşısında mücadele eden İnce Memed'in hikâyesini anlatır. Toprak ağalığı, özgürlük, başkaldırı ve halkın direnişi romanın temel konuları arasındadır."
   },
   {
     "kitapAdi": "Tutunamayanlar",
@@ -96,7 +105,8 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/tutunamayanlar.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2025-03-30"
+    "eklenmeTarihi": "2025-03-30",
+    "aciklama": "Turgut Özben'in arkadaşı Selim Işık'ın hayatını araştırırken kendi yaşamını da sorgulamasını konu alır. Bireyin toplumla çatışmasını, yalnızlığı, kimlik arayışını ve modern insanın iç dünyasını ele alır."
   },
   {
     "kitapAdi": "Küçük Prens",
@@ -107,7 +117,8 @@
     "fakulte": "Eğitim Fakültesi",
     "kitapFoto": "images/kucuk-prens.jpg",
     "tur": "E-Kitap",
-    "eklenmeTarihi": "2026-07-06"
+    "eklenmeTarihi": "2026-07-06",
+    "aciklama": "Küçük bir gezegenden gelen prensin farklı dünyalarda yaptığı yolculukları anlatır. Dostluk, sevgi, sorumluluk ve hayata çocukların gözünden bakabilmek üzerine anlamlı mesajlar verir."
   },
   {
     "kitapAdi": "Don Kişot",
@@ -118,7 +129,8 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/don-kisot.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2024-01-10"
+    "eklenmeTarihi": "2024-01-10",
+    "aciklama": "Şövalye hikâyelerinden etkilenerek kendisini gezgin bir şövalye ilan eden Don Kişot'un maceralarını anlatır. Hayal ile gerçek arasındaki çatışmayı mizah yoluyla işler ve insanın idealleri uğruna mücadelesini sorgular."
   },
   {
     "kitapAdi": "Anna Karenina",
@@ -129,7 +141,8 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/anna-karenina.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2025-10-03"
+    "eklenmeTarihi": "2025-10-03",
+    "aciklama": "Anna Karenina'nın aşkı, evliliği ve toplumun beklentileri arasında yaşadığı çatışmaları anlatır. Aile ilişkileri, sadakat, mutluluk, toplumsal baskı ve bireysel seçimlerin sonuçlarını derinlemesine inceler."
   },
   {
     "kitapAdi": "Fahrenheit 451",
@@ -140,7 +153,8 @@
     "fakulte": "Mühendislik Fakültesi",
     "kitapFoto": "images/fahrenheit-451.jpg",
     "tur": "E-Kitap",
-    "eklenmeTarihi": "2026-04-04"
+    "eklenmeTarihi": "2026-04-04",
+    "aciklama": "Kitapların yasaklandığı bir gelecekte yaşayan itfaiyeci Guy Montag'ın düşünce dünyasının değişmesini konu alır. Sansür, bilgiye erişim, sorgulama özgürlüğü ve teknolojinin toplum üzerindeki etkilerini ele alır."
   },
   {
     "kitapAdi": "Hayvan Çiftliği",
@@ -151,7 +165,8 @@
     "fakulte": "İktisadi ve İdari Bilimler Fakültesi",
     "kitapFoto": "images/hayvan-ciftligi.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2024-12-22"
+    "eklenmeTarihi": "2024-12-22",
+    "aciklama": "Bir çiftlikteki hayvanların eşitlik amacıyla başlattığı isyanın zamanla yeni bir baskı düzenine dönüşmesini anlatır. Gücün yozlaşması, propaganda, sınıf farklılıkları ve siyasi iktidar üzerine alegorik bir eleştiridir."
   },
   {
     "kitapAdi": "Yabancı",
@@ -162,7 +177,8 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/yabanci.jpg",
     "tur": "Tez",
-    "eklenmeTarihi": "2026-10-08"
+    "eklenmeTarihi": "2026-10-08",
+    "aciklama": "Meursault adlı karakterin yaşadıkları üzerinden toplumun ahlak anlayışını ve insanın dünyadaki yerini sorgular. Yabancılaşma, kayıtsızlık, özgürlük ve hayatın anlamı gibi varoluşçu temaları işler."
   },
   {
     "kitapAdi": "Uçurtma Avcısı",
@@ -173,7 +189,8 @@
     "fakulte": "Eğitim Fakültesi",
     "kitapFoto": "images/ucurtma-avcisi.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2025-08-28"
+    "eklenmeTarihi": "2025-08-28",
+    "aciklama": "Afganistan'da büyüyen Emir'in çocukluk arkadaşı Hasan ile ilişkisini ve geçmişte yaptığı bir hatayla yüzleşmesini anlatır. Dostluk, ihanet, suçluluk, aile bağları ve kendini affetme temalarını işler."
   },
   {
     "kitapAdi": "Martı",
@@ -184,7 +201,8 @@
     "fakulte": "Eğitim Fakültesi",
     "kitapFoto": "images/marti.jpg",
     "tur": "E-Kitap",
-    "eklenmeTarihi": "2026-05-02"
+    "eklenmeTarihi": "2026-05-02",
+    "aciklama": "Diğer martılardan farklı olarak yalnızca yemek bulmak yerine uçmayı geliştirmek isteyen Jonathan Livingston'ın hikâyesini anlatır. Özgünlük, özgürlük, kendini aşma ve tutkularının peşinden gitme üzerine ilham verir."
   },
   {
     "kitapAdi": "Saatleri Ayarlama Enstitüsü",
@@ -195,7 +213,8 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/saatleri-ayarlama-enstitusu.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2024-06-15"
+    "eklenmeTarihi": "2024-06-15",
+    "aciklama": "Hayri İrdal'ın yaşamı ve Saatleri Ayarlama Enstitüsü'nün kuruluşu üzerinden toplumdaki değişimi anlatır. Gelenek ile modernlik arasındaki çatışmayı, bürokrasiyi ve toplumsal alışkanlıkları mizahi bir dille eleştirir."
   },
   {
     "kitapAdi": "Çalıkuşu",
@@ -206,7 +225,8 @@
     "fakulte": "Eğitim Fakültesi",
     "kitapFoto": "images/calikusu.jpg",
     "tur": "Kitap",
-    "eklenmeTarihi": "2025-09-27"
+    "eklenmeTarihi": "2025-09-27",
+    "aciklama": "Feride'nin yaşadığı hayal kırıklığının ardından Anadolu'da öğretmenlik yaparak kendi ayakları üzerinde durma mücadelesini anlatır. Aşk, fedakârlık, eğitim, toplumsal yaşam ve kadınların bağımsızlığı üzerinde durur."
   },
   {
     "kitapAdi": "Kuyucaklı Yusuf",
@@ -217,6 +237,7 @@
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/kuyucakli-yusuf.jpg",
     "tur": "Makale",
-    "eklenmeTarihi": "2026-01-01"
+    "eklenmeTarihi": "2026-01-01",
+    "aciklama": "Küçük yaşta ailesini kaybeden Yusuf'un yeni çevresinde adaletsizlik ve güç ilişkileriyle mücadelesini anlatır. Toplumsal eşitsizlik, yozlaşma, özgürlük ve bireyin çevresiyle çatışması romanın temel konularıdır."
   }
 ]
