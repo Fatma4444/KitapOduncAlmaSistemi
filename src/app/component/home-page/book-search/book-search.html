@@ -12,9 +12,10 @@
         <input
             type="text"
             placeholder="Kitap, yazar, konu ara..."
+            (click)="searchBooks()"
         >
 
-        <button class="search-button">
+        <button class="search-button" type="button" (click)="searchBooks()">
             🔍
         </button>
 

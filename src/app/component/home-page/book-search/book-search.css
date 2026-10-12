@@ -29,6 +29,28 @@
     background: rgba(0, 0, 0, 0.40);
 }
 
+
+:host {
+  display: block;
+  animation: catalogFade 1.2s ease-in-out both;
+}
+
+@keyframes catalogFade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :host {
+    animation: none;
+  }
+}
+
 /* Yazılar */
 .writing {
     position: relative;
