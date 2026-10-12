@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './reservation-header.css',
   templateUrl: './reservation-header.html',
 })
-export class ReservationHeader {}
+export class ReservationHeader {
+
+  constructor(private router:Router){}
+
+  Geri(){
+      this.router.navigate(['/profile']);
+  }
+}
