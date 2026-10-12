@@ -54,10 +54,7 @@ export const routes: Routes = [
   {
     path: 'reservation',
     component: Reservation
-  }, {
-    path: 'borrowed-books',
-    component: BorrowedBooks
-  },
+  }, 
   {
     path: 'my-past',
     component: MyPastPage

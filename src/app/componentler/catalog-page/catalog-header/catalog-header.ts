@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CatalogHeader {
 
+  geriDon(): void {
+  window.history.back();
+  }
+
 }

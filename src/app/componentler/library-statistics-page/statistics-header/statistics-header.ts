@@ -16,4 +16,8 @@ export class StatisticsHeader {
     this.menuAcik = false;
   }
 
+  geriDon(): void {
+  window.history.back();
+  }
+
 }

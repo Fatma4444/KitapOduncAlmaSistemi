@@ -1,3 +1,4 @@
+
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -7,7 +8,15 @@ import { Component, Input } from '@angular/core';
   templateUrl: './new-arrival-card.html',
 })
 export class NewArrivalCard {
-
   @Input() book: any;
 
+  modalAcik = false;
+
+  bilgileriGoster(): void {
+    this.modalAcik = true;
+  }
+
+  pencereyiKapat(): void {
+    this.modalAcik = false;
+  }
 }
