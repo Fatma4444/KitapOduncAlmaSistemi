@@ -17,19 +17,3 @@
     height: auto;
 }
 
-.notification-button {
-    width: 38px;
-    height: 38px;
-
-    border: none;
-    border-radius: 50%;
-
-    background-color: #592706;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 18px;
-    cursor: pointer;
-}
