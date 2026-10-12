@@ -19,5 +19,8 @@ export class QuickAccess {
   quickAccess3(){
     this.router.navigate(['/favorite'])
   }
+  quickAccess4(){
+    this.router.navigate(['/library-statistics'])
+  }
 
 }
