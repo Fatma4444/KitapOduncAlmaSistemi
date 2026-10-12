@@ -1,1 +1,38 @@
-<p>analysis-list works!</p>
+<div class="analysis-list">
+  <div class="list-header">
+    <h2>Kitap Analizi</h2>
+  </div>
+
+
+  <div class="book-list">
+    @for (kitap of kitaplar; track kitap.kitapAdi) {
+      <div class="book-item">
+        <img
+          [src]="kitap.kitapFoto"
+          [alt]="kitap.kitapAdi"
+        />
+
+        <div class="book-info">
+          <h3>{{ kitap.kitapAdi }}</h3>
+          <p>{{ kitap.yazar }}</p>
+        </div>
+
+        <div class="borrow-info">
+          <div class="borrow-chart" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="borrow-details">
+            <strong>{{ kitap.oduncSayisi }}</strong>
+            <span>ödünç alındı</span>
+            <small>(son 3 ay)</small>
+          </div>
+        </div>
+
+        
+      </div>
+    }
+  </div>
+</div>
