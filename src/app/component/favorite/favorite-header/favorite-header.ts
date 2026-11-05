@@ -8,8 +8,10 @@ import { Router } from '@angular/router';
   templateUrl: './favorite-header.html',
 })
 export class FavoriteHeader {
-    constructor(private router:Router){}
-  GeriD(){
-      this.router.navigate(['/profile']);
+
+  constructor(private router: Router) {}
+
+  GeriD() {
+    this.router.navigate(['/']);
   }
 }
