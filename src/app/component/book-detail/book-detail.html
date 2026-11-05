@@ -1,5 +1,28 @@
-<app-header></app-header>
-<app-book-presentation [kitap]="kitap"></app-book-presentation>
-<app-orientation [kitap]="kitap"></app-orientation>
-<app-book-description [kitap]="kitap"></app-book-description>
-<app-footer></app-footer>
+
+@if (kitap(); as secilenKitap) {
+
+  <app-header></app-header>
+
+  <app-book-presentation
+    [kitap]="secilenKitap">
+  </app-book-presentation>
+
+  <app-orientation
+    [kitap]="secilenKitap">
+  </app-orientation>
+
+  <app-book-description
+    [kitap]="secilenKitap">
+  </app-book-description>
+
+  <app-footer></app-footer>
+
+} @else if (yukleniyor()) {
+
+  <p>Kitap bilgileri yükleniyor...</p>
+
+} @else {
+
+  <p>Kitap bulunamadı!</p>
+
+}

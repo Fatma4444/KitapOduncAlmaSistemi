@@ -2,6 +2,7 @@
 import { Component, input } from '@angular/core';
 import { Router } from '@angular/router';
 import { FavoriteService } from '../../../../services/favorite.service';
+
 @Component({
   imports: [],
   selector: 'app-book-card',
@@ -9,6 +10,7 @@ import { FavoriteService } from '../../../../services/favorite.service';
   templateUrl: './book-card.html',
 })
 export class BookCard {
+
   kitapAdi = input<string>('');
   yazar = input<string>('');
   basimYili = input<number>(0);
@@ -23,7 +25,11 @@ export class BookCard {
   ) {}
 
   kitapDetayinaGit(): void {
-    this.router.navigate(['/book-detail']);
+    this.router.navigate(['/book-detail'], {
+      queryParams: {
+        kitapAdi: this.kitapAdi()
+      }
+    });
   }
 
   favoriyeEkle(event: MouseEvent): void {

@@ -1,74 +1,89 @@
+
 <div class="locations-section">
 
   <div class="section-title">
 
     <div class="section-title-left">
       <span class="location-icon">📍</span>
-
-      <strong>
-        Bulunduğu Fakülteler & Raflar
-      </strong>
+      <strong>Bulunduğu Fakülteler & Raflar</strong>
     </div>
 
     <span class="location-count">
-      {{ kitap.availability.totalBranches }} Şube
+      {{ kitap.availability?.totalBranches ?? 1 }} Şube
     </span>
 
   </div>
 
+  @if (kitap.locations?.length > 0) {
 
-  @for (location of kitap.locations; track location.library) {
+    @for (location of kitap.locations; track location.library) {
+
+      <div class="location-card">
+
+        <div class="location-info">
+
+          <strong>{{ location.library }}</strong>
+
+          <span>
+            {{ location.locationType }}
+            • {{ location.floor }}
+
+            @if (location.shelf) {
+              • Raf: {{ location.shelf }}
+            }
+          </span>
+
+        </div>
+
+        <div class="location-status">
+
+          @if (location.available) {
+
+            <span class="available">Rafta Var</span>
+
+            <button class="map-button">
+              🗺 Haritada Gör
+            </button>
+
+          } @else {
+
+            <span class="borrowed">
+              Ödünçte
+              @if (location.returnDate) {
+                ({{ location.returnDate }})
+              }
+            </span>
+
+            <button class="location-button">
+              🗺 Konum
+            </button>
+
+          }
+
+        </div>
+
+      </div>
+
+    }
+
+  } @else {
 
     <div class="location-card">
 
       <div class="location-info">
 
-        <strong>
-          {{ location.library }}
-        </strong>
+        <strong>{{ kitap.fakulte || 'Fakülte bilgisi bulunamadı' }}</strong>
 
-        <span>
-          {{ location.locationType }}
-          •
-          {{ location.floor }}
-
-          @if (location.shelf) {
-            • Raf: {{ location.shelf }}
-          }
-
-        </span>
+        <span>Fakülte Kütüphanesi</span>
 
       </div>
 
-
       <div class="location-status">
 
-        @if (location.available) {
-
-          <span class="available">
-            Rafta Var
-          </span>
-
-          <button class="map-button">
-            🗺 Haritada Gör
-          </button>
-
+        @if (kitap.raftaMi) {
+          <span class="available">Rafta Var</span>
         } @else {
-
-          <span class="borrowed">
-
-            Ödünçte
-
-            @if (location.returnDate) {
-              ({{ location.returnDate }})
-            }
-
-          </span>
-
-          <button class="location-button">
-            🗺 Konum
-          </button>
-
+          <span class="borrowed">Ödünçte</span>
         }
 
       </div>
