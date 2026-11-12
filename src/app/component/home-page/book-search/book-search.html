@@ -1,0 +1,47 @@
+
+<div class="banner">
+    <div class="picture">
+
+        <div class="digital-grid"></div>
+
+        <div class="writing">
+            <span class="welcome-tag">
+                <span class="status-dot"></span>
+                BİNGÖL ÜNİVERSİTESİ KÜTÜPHANESİ
+            </span>
+
+            <h2 class="hi">
+                Merhaba 👋
+                <br>
+                Kütüphaneye
+                <br>
+                Hoş Geldin
+            </h2>
+
+            <h5 class="fareword">
+                Bilgiye açılan kapı, geleceğine ışık tutar.
+            </h5>
+
+            <div class="banner-line"></div>
+        </div>
+
+        <div class="scan-line"></div>
+    </div>
+
+    <div class="search">
+        <span class="search-icon">⌕</span>
+
+        <input
+            type="text"
+            placeholder="Kitap, yazar, konu ara..."
+            (keyup.enter)="searchBooks()"
+        >
+
+        <button
+            class="search-button"
+            type="button"
+            (click)="searchBooks()">
+            🔍
+        </button>
+    </div>
+</div>

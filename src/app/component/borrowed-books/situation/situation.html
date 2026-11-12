@@ -1,0 +1,62 @@
+<div class="situation">
+
+  <!-- Öğrenci bilgileri -->
+  <div class="student-section">
+
+    <div class="book-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 5.5C4 4.67 4.67 4 5.5 4H11C12.1 4 13 4.9 13 6V20C12.45 19.45 11.7 19 10.5 19H5.5C4.67 19 4 18.33 4 17.5V5.5Z"></path>
+        <path d="M20 5.5C20 4.67 19.33 4 18.5 4H13C11.9 4 11 4.9 11 6V20C11.55 19.45 12.3 19 13.5 19H18.5C19.33 19 20 18.33 20 17.5V5.5Z"></path>
+      </svg>
+    </div>
+
+    <div class="student-info">
+
+      <div class="student-name">
+        {{ situation.student.name }}
+        <span>• {{ situation.student.studentNumber }}</span>
+      </div>
+
+      <div class="active-books">
+        Aktif Ödünç:
+        {{ situation.student.activeBooks }} /
+        {{ situation.student.bookLimit }} Kitap
+      </div>
+
+    </div>
+
+    <div class="limit">
+  {{ situation.student.limitText }}
+</div>
+
+  </div>
+
+  <!-- Ayırıcı -->
+  <div class="divider"></div>
+
+  <!-- Hatırlatma -->
+  <div class="reminder">
+
+    <div class="reminder-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3L22 20H2L12 3Z"></path>
+        <path d="M12 9V14"></path>
+        <circle cx="12" cy="17" r="0.8"></circle>
+      </svg>
+    </div>
+
+    <div class="reminder-content">
+
+      <div class="reminder-title">
+        {{ situation.reminder.title }}
+      </div>
+
+      <div class="reminder-message">
+        {{ situation.reminder.message }}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

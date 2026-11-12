@@ -1,0 +1,30 @@
+
+<div class="book-presentation">
+
+  <div class="book-presentation-image">
+    <img
+      [src]="kitap.kitapFoto"
+      [alt]="kitap.kitapAdi">
+  </div>
+
+  <div class="book-presentation-text">
+
+    <h2>{{ kitap.kitapAdi }}</h2>
+
+    <p class="authors">
+      {{ kitap.yazar }}
+    </p>
+
+    <p class="book-year">
+      {{ kitap.basimYili }} • {{ kitap.dil }}
+    </p>
+
+    <div class="book-status">
+      <span>
+        {{ kitap.raftaMi ? '✓ Rafta Var' : 'Ödünçte' }}
+      </span>
+    </div>
+
+  </div>
+
+</div>

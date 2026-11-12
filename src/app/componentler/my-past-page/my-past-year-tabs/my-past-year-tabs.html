@@ -1,0 +1,14 @@
+
+<div class="year-tabs">
+  @for (year of years; track year) {
+    <button
+      type="button"
+      class="year-tab"
+      [class.active]="selectedYear === year"
+      (click)="selectYear(year)"
+    >
+      {{ year === 'Tümü' ? 'Tümü' : year.replace('–', ' - ') }}
+      ({{ getCount(year) }})
+    </button>
+  }
+</div>

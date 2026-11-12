@@ -1,0 +1,37 @@
+.catalog-list {
+  padding: 10px 6px;
+}
+
+/* Sonuç sayısı + sıralama */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 14px;
+}
+
+/* Sonuç sayısı */
+.list-header span {
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #777;
+}
+
+/* Sıralama kutusu */
+.list-header select {
+  padding: 7px 10px;
+
+  border: 1px solid #e0c5ce;
+  border-radius: 8px;
+
+  background-color: #ffffff;
+
+  color: #555;
+
+  font-size: 12px;
+
+  cursor: pointer;
+  outline: none;
+}

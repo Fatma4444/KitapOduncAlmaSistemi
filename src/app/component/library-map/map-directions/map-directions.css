@@ -1,0 +1,64 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+.directions {
+    padding: 14px 16px 24px;
+    border-top: 1px solid #eeeeee;
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.directions-title {
+    margin: 0 0 12px;
+    color: #1f2937;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #f9e1e6;
+    color: #85233b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.step-active .step-number {
+    background: #85233b;
+    color: #ffffff;
+}
+
+.step-text {
+    flex: 1;
+    color: #344054;
+    font-size: 13px;
+}
+
+.step-distance {
+    flex-shrink: 0;
+    color: #999999;
+    font-size: 11px;
+}

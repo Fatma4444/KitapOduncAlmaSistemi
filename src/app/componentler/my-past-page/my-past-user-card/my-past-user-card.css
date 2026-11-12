@@ -1,0 +1,183 @@
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.user-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #f0f0f2;
+  border-radius: 17px;
+  box-shadow: 0 3px 12px rgba(20, 25, 40, 0.03);
+}
+
+/* Kullanıcı bilgileri */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f0f1f4;
+}
+
+.user-avatar {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f7e9c6;
+  border-radius: 13px;
+  background: #fff9e9;
+  color: #8b2337;
+}
+
+.book-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  color: #8b2337;
+  flex-shrink: 0;
+}
+
+.user-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.user-details h2 {
+  margin: 0;
+  color: #292d3a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.student-number {
+  color: #858995;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.user-details p {
+  margin: 5px 0 0;
+  color: #777d8c;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.clean-badge {
+  flex-shrink: 0;
+  padding: 7px 10px;
+  border: 1px solid #b8f0d5;
+  border-radius: 20px;
+  background: #effdf6;
+  color: #159568;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Üç istatistik kartı */
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  width: 100%;
+  padding-top: 13px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  min-height: 58px;
+  padding: 10px 4px;
+  box-sizing: border-box;
+  border: 1px solid #f0f0f2;
+  border-radius: 12px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  color: #777d8c;
+  font-size: 10px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.stat-item strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.total-value,
+.penalty-value {
+  color: #a51f35;
+}
+
+.returned-value {
+  color: #07966b;
+}
+
+/* Dar mobil ekranlar */
+@media (max-width: 350px) {
+  .user-card {
+    padding: 12px;
+  }
+
+  .user-info {
+    gap: 7px;
+  }
+
+  .user-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .book-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .user-details h2 {
+    font-size: 12px;
+  }
+
+  .student-number {
+    font-size: 9px;
+  }
+
+  .user-details p {
+    font-size: 9px;
+  }
+
+  .clean-badge {
+    padding: 6px 7px;
+    font-size: 9px;
+  }
+
+  .stat-label {
+    font-size: 9px;
+  }
+
+  .stat-item strong {
+    font-size: 12px;
+  }
+}

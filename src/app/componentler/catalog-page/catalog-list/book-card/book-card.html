@@ -1,0 +1,53 @@
+<div class="book-card" (click)="kitapDetayinaGit()">
+
+  <!-- Kitap kapağı -->
+  <div class="book-cover">
+    <img [src]="kitapFoto()" alt="Kitap kapağı">
+  </div>
+
+  <!-- Kitap bilgileri -->
+  <div class="book-info">
+
+    <div class="book-header">
+      <h3>{{ kitapAdi() }}</h3>
+
+      <!-- Bookmark -->
+      <span
+        class="bookmark"
+        [class.favorited]="favoriteService.favoriMi(kitapAdi())"
+        (click)="favoriyeEkle($event)"
+      >
+      {{ favoriteService.favoriMi(kitapAdi()) ? '♥' : '♡' }}
+      </span>
+    </div>
+
+    <p class="author">
+      {{ yazar() }}
+    </p>
+
+    <p class="details">
+      {{ basimYili() }}
+      <span>•</span>
+      {{ dil() }}
+    </p>
+
+    <!-- Durum -->
+    <div
+      class="status"
+      [class.available]="raftaMi()"
+      [class.borrowed]="!raftaMi()">
+
+      <span>{{ raftaMi() ? '✓' : '◉' }}</span>
+      {{ raftaMi() ? 'Rafta Var' : 'Ödünçte' }}
+
+    </div>
+
+    <!-- Fakülte -->
+    <p class="faculty">
+      <span class="location-icon">●</span>
+      {{ fakulte() }}
+    </p>
+
+  </div>
+
+</div>

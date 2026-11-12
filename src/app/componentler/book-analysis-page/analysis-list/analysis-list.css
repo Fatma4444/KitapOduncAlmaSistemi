@@ -1,0 +1,210 @@
+
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.analysis-list {
+  width: 100%;
+  min-width: 0;
+  padding: 24px 28px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.list-header {
+  margin-bottom: 24px;
+}
+
+.list-header h2 {
+  margin: 0 0 8px;
+  color: #263238;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.list-header p {
+  margin: 0;
+  color: #757575;
+  font-size: 15px;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 120px;
+  padding: 14px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.book-item img {
+  display: block;
+  width: 80px;
+  height: 96px;
+  flex-shrink: 0;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.book-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-info h3 {
+  margin: 0 0 7px;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+
+.book-info p {
+  margin: 0;
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.borrow-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.borrow-chart {
+  height: 24px;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.borrow-chart span {
+  display: block;
+  width: 4px;
+  border-radius: 2px;
+  background-color: #941b23;
+}
+
+.borrow-chart span:nth-child(1) {
+  height: 11px;
+}
+
+.borrow-chart span:nth-child(2) {
+  height: 17px;
+}
+
+.borrow-chart span:nth-child(3) {
+  height: 24px;
+}
+
+.borrow-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 76px;
+}
+
+.borrow-details strong {
+  color: #941b23;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.borrow-details span {
+  color: #777777;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.borrow-details small {
+  color: #999999;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.arrow {
+  color: #999999;
+  font-size: 25px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+@media (max-width: 420px) {
+  .analysis-list {
+    padding: 18px 16px;
+  }
+
+  .list-header h2 {
+    font-size: 24px;
+  }
+
+  .list-header p {
+    font-size: 13px;
+  }
+
+  .book-item {
+    gap: 9px;
+    min-height: 96px;
+    padding: 12px 0;
+  }
+
+  .book-item img {
+    width: 56px;
+    height: 72px;
+  }
+
+  .book-info h3 {
+    font-size: 13px;
+  }
+
+  .book-info p {
+    font-size: 11px;
+  }
+
+  .borrow-info {
+    gap: 5px;
+  }
+
+  .borrow-chart {
+    gap: 2px;
+  }
+
+  .borrow-chart span {
+    width: 3px;
+  }
+
+  .borrow-details {
+    min-width: 56px;
+  }
+
+  .borrow-details strong {
+    font-size: 15px;
+  }
+
+  .borrow-details span {
+    font-size: 9px;
+  }
+
+  .borrow-details small {
+    font-size: 8px;
+  }
+
+  .arrow {
+    font-size: 21px;
+  }
+}

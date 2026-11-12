@@ -1,0 +1,98 @@
+{
+  "student": {
+    "name": "Fatma Altındağ",
+    "studentNumber": "220101023",
+    "activeBooks": 3,
+    "bookLimit": 3,
+    "limitText": "Limit Dolu"
+  },
+
+  "reminder": {
+    "title": "Hatırlatma:",
+    "message": "Teslim süresi dolmadan önce rezerve edilmemiş kitapların süresini 1 kez 15 gün uzatabilirsiniz."
+  },
+
+  "filters": [
+  {
+    "name": "Tümü",
+    "count": 3,
+    "type": "all"
+  },
+  {
+    "name": "Teslimi Yaklaşan",
+    "count": 1,
+    "type": "warning"
+  }
+],
+
+  "loanInformation": {
+    "filters": [
+      {
+        "name": "Tümü",
+        "count": 3,
+        "active": true
+      },
+      {
+        "name": "Teslimi Yaklaşan",
+        "count": 1,
+        "active": false
+      },
+      {
+        "name": "Normal",
+        "count": 2,
+        "active": false
+      }
+    ],
+
+    "books": [
+  {
+    "id": 1,
+    "status": "Son 3 Gün (Teslim Yaklaştı)",
+    "statusType": "warning",
+    "remaining": "Verilince: 01",
+    "title": "Kürk Mantolu Madonna",
+    "author": "Sabahattin Ali",
+    "year": "1943",
+    "category": "Türk Edebiyatı",
+    "location": "Merkez Kütüphane",
+    "borrowDate": "18 Eki",
+    "returnDate": "27 Eki 2024",
+    "cover": "/images/kurk-mantolu-madonna.jpg",
+    "extendText": "Süre Uzat (+15 Gün)",
+    "canExtend": true
+  },
+  {
+    "id": 2,
+    "status": "Devam Ediyor (11 Gün Kaldı)",
+    "statusType": "normal",
+    "remaining": "1 Kez Uzatıldı",
+    "title": "Küçük Prens",
+    "author": "Antoine de Saint-Exupéry",
+    "year": "1943",
+    "category": "Dünya Edebiyatı",
+    "location": "Merkez Kütüphane",
+    "borrowDate": "18 Eki",
+    "returnDate": "02 Kas 2024",
+    "cover": "/images/kucuk-prens.jpg",
+    "extendText": "Hak Doldu (1/1)",
+    "canExtend": false
+  },
+  {
+    "id": 3,
+    "status": "Devam Ediyor (18 Gün Kaldı)",
+    "statusType": "normal",
+    "remaining": "Verilince: 01",
+    "title": "Martı",
+    "author": "Richard Bach",
+    "year": "1970",
+    "category": "Dünya Edebiyatı",
+    "location": "Merkez Kütüphane",
+    "borrowDate": "22 Eki",
+    "returnDate": "06 Kas 2024",
+    "cover": "/images/marti.jpg",
+    "extendText": "Süre Uzat (+15 Gün)",
+    "canExtend": true
+  }
+]
+  }
+}

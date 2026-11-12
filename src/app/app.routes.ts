@@ -1,3 +1,74 @@
-import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { Routes } from '@angular/router';
+import { CatalogPage } from './componentler/catalog-page/catalog-page';
+import { HomePage } from './component/home-page/home-page';
+import { BookDetail } from './component/book-detail/book-detail';
+import { LibraryStatisticsPage } from './componentler/library-statistics-page/library-statistics-page';
+import { TopicDistribution } from './component/topic-distribution/topic-distribution';
+import { Profile } from './component/profile/profile';
+import { NewArrivalsPage } from './componentler/new-arrivals-page/new-arrivals-page';
+import { BorrowedBooks } from './component/borrowed-books/borrowed-books';
+import { Reservation } from './component/reservation/reservation';
+import { MyPastPage } from './componentler/my-past-page/my-past-page';
+import { Favorite } from './component/favorite/favorite';
+import { BookAnalysisPage } from './componentler/book-analysis-page/book-analysis-page';
+import { LibraryMap } from './component/library-map/library-map';
+
+export const routes: Routes = [
+  {
+    path: '',
+    component: HomePage
+  },
+  {
+    path: 'topic-distribution',
+    component: TopicDistribution
+  },
+  {
+    path: 'catalog',
+    component: CatalogPage
+  },
+  {
+    path: 'profile',
+    component: Profile
+  },
+  {
+    path: 'book-detail',
+    component: BookDetail
+  },
+  {
+    path: 'library-statistics',
+    component: LibraryStatisticsPage
+  },
+  {
+    path: 'borrowed-books',
+    component: BorrowedBooks
+  },
+  {
+    path: 'library-statistics',
+    component: LibraryStatisticsPage
+  },
+  {
+    path: 'new-arrivals',
+    component: NewArrivalsPage
+  },
+  {
+    path: 'reservation',
+    component: Reservation
+  }, 
+  {
+    path: 'my-past',
+    component: MyPastPage
+  },
+  {
+    path: 'favorite',
+    component: Favorite
+  },
+  {
+    path: 'book-analysis',
+    component: BookAnalysisPage
+  },
+  {
+    path: 'map',
+    component: LibraryMap
+  }
+];

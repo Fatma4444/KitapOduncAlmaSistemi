@@ -1,0 +1,27 @@
+:host {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  z-index: 10;
+}
+
+.back-button {
+  padding: 4px;
+  border: none;
+  background: transparent;
+  color: #18334f;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover {
+  background: transparent;
+  color: #18334f;
+}

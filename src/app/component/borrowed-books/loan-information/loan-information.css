@@ -1,0 +1,219 @@
+.loan-information {
+  width: 100%;
+  padding: 30px 8px 8px 8px;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   FİLTRELER
+   ========================= */
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.filter {
+  padding: 6px 10px;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #777777;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.filter.active {
+  background: #a51f3b;
+  border-color: #a51f3b;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   KİTAP KARTI
+   ========================= */
+
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.book-card {
+  width: 100%;
+
+  padding: 9px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+  border-radius: 9px;
+
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Durum satırı */
+
+.book-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+}
+
+.book-status {
+  padding: 4px 7px;
+
+  border-radius: 10px;
+
+  background: #e7faf1;
+
+  color: #24a36d;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.book-status.warning {
+  background: #fff0d9;
+  color: #df8b19;
+}
+
+.remaining {
+  font-size: 9px;
+  color: #999999;
+}
+
+
+/* =========================
+   KİTAP BİLGİLERİ
+   ========================= */
+
+.book-content {
+  display: flex;
+  gap: 9px;
+}
+
+.book-cover {
+  width: 48px;
+  height: 68px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 5px;
+
+  background: #f3f3f3;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.book-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-details h3 {
+  margin: 0 0 3px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #333333;
+}
+
+.book-details p {
+  margin: 2px 0;
+
+  font-size: 9px;
+  line-height: 1.3;
+
+  color: #777777;
+}
+
+.book-dates {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 5px;
+
+  font-size: 7px;
+
+  color: #888888;
+}
+
+.book-dates strong {
+  color: #c24b36;
+  font-weight: 600;
+}
+
+
+/* =========================
+   BUTONLAR
+   ========================= */
+
+.book-actions {
+  display: flex;
+  gap: 6px;
+
+  margin-top: 8px;
+}
+
+.book-actions button {
+  height: 28px;
+
+  border-radius: 6px;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.extend-button {
+  flex: 1;
+
+  border: none;
+
+  background: #a51f3b;
+  color: white;
+}
+
+.extend-button.disabled {
+  background: #eeeeee;
+  color: #aaaaaa;
+
+  cursor: default;
+}
+
+.map-button {
+  flex: 1;
+
+  border: 1px solid #dddddd;
+
+  background: #ffffff;
+
+  color: #666666;
+}

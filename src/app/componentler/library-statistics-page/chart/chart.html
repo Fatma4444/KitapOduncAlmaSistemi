@@ -1,0 +1,169 @@
+<div class="chart-container">
+
+  <h2>Aylık Ödünç Alma Sayısı</h2>
+
+  <div class="chart-area">
+
+    <svg viewBox="0 0 700 300">
+
+      <defs>
+        <linearGradient
+          id="chartGradient"
+          x1="0"
+          y1="0"
+          x2="0"
+          y2="1"
+        >
+          <stop
+            offset="0%"
+            stop-color="#9b1c31"
+            stop-opacity="0.30"
+          />
+          <stop
+            offset="45%"
+            stop-color="#9b1c31"
+            stop-opacity="0.15"
+          />
+          <stop
+            offset="100%"
+            stop-color="#9b1c31"
+            stop-opacity="0"
+          />
+        </linearGradient>
+      </defs>
+
+      <!-- Y EKSENİ DEĞERLERİ -->
+      <text x="5" y="45">2.000</text>
+      <text x="5" y="90">1.500</text>
+      <text x="5" y="135">1.000</text>
+      <text x="15" y="180">500</text>
+      <text x="15" y="225">0</text>
+
+      <!-- YARDIMCI YATAY ÇİZGİLER -->
+      <line x1="40" y1="40" x2="665" y2="40" stroke="#e5e7eb" stroke-width="1" />
+      <line x1="40" y1="85" x2="665" y2="85" stroke="#e5e7eb" stroke-width="1" />
+      <line x1="40" y1="130" x2="665" y2="130" stroke="#e5e7eb" stroke-width="1" />
+      <line x1="40" y1="175" x2="665" y2="175" stroke="#e5e7eb" stroke-width="1" />
+      <line x1="40" y1="220" x2="665" y2="220" stroke="#e5e7eb" stroke-width="1" />
+
+      <!-- GRAFİĞİN ALT DOLGU ALANI -->
+      <polygon
+        points="
+          40,193
+          95,175
+          150,188
+          205,157
+          260,180
+          315,161
+          370,184
+          425,170
+          480,148
+          535,60
+          590,103
+          645,90
+          645,220
+          40,220
+        "
+        fill="url(#chartGradient)"
+      />
+
+      <!-- ANA GRAFİK ÇİZGİSİ -->
+      <polyline
+        points="
+          40,193
+          95,175
+          150,188
+          205,157
+          260,180
+          315,161
+          370,184
+          425,170
+          480,148
+          535,60
+          590,103
+          645,90
+        "
+        fill="none"
+        stroke="#9b1c31"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+
+      <!-- GRAFİK NOKTALARI -->
+      <circle cx="40" cy="193" r="4" fill="#9b1c31" />
+      <circle cx="95" cy="175" r="4" fill="#9b1c31" />
+      <circle cx="150" cy="188" r="4" fill="#9b1c31" />
+      <circle cx="205" cy="157" r="4" fill="#9b1c31" />
+      <circle cx="260" cy="180" r="4" fill="#9b1c31" />
+      <circle cx="315" cy="161" r="4" fill="#9b1c31" />
+      <circle cx="370" cy="184" r="4" fill="#9b1c31" />
+      <circle cx="425" cy="170" r="4" fill="#9b1c31" />
+      <circle cx="480" cy="148" r="4" fill="#9b1c31" />
+
+      <!-- EKİM - SEÇİLİ NOKTA -->
+      <circle
+        cx="535"
+        cy="60"
+        r="7"
+        fill="white"
+        stroke="#9b1c31"
+        stroke-width="3"
+      />
+
+      <circle cx="590" cy="103" r="4" fill="#9b1c31" />
+      <circle cx="645" cy="90" r="4" fill="#9b1c31" />
+
+      <!-- EKİM BİLGİ KUTUSU -->
+      <rect
+        x="495"
+        y="15"
+        width="80"
+        height="42"
+        rx="9"
+        fill="#9b1c31"
+      />
+
+      <text
+        class="selected-label"
+        x="535"
+        y="31"
+        text-anchor="middle"
+        fill="white"
+        font-size="11"
+        font-weight="600"
+      >
+        Ekim
+      </text>
+
+      <text
+        class="selected-value"
+        x="535"
+        y="47"
+        text-anchor="middle"
+        fill="white"
+        font-size="12"
+        font-weight="700"
+      >
+        1.782
+      </text>
+
+      <!-- AY İSİMLERİ -->
+      <text x="40" y="250">Oca</text>
+      <text x="95" y="250">Şub</text>
+      <text x="150" y="250">Mar</text>
+      <text x="205" y="250">Nis</text>
+      <text x="260" y="250">May</text>
+      <text x="315" y="250">Haz</text>
+      <text x="370" y="250">Tem</text>
+      <text x="425" y="250">Ağu</text>
+      <text x="480" y="250">Eyl</text>
+      <text x="535" y="250" fill="#9b1c31" font-weight="700">Eki</text>
+      <text x="590" y="250">Kas</text>
+      <text x="645" y="250">Ara</text>
+
+    </svg>
+
+  </div>
+
+</div>

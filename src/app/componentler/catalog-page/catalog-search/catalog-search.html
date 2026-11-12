@@ -1,0 +1,21 @@
+<div class="catalog-search">
+
+  <div class="search-box">
+
+    <span class="search-icon">⌕</span>
+
+    <input 
+      type="text" 
+      placeholder="kitap ara..."
+      #searchInput
+      (input)="ara(searchInput.value)"
+      (keyup.enter)="ara(searchInput.value)"
+    />
+
+    <button (click)="ara(searchInput.value)">
+      🔍
+    </button>
+
+  </div>
+
+</div>

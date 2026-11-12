@@ -1,0 +1,222 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.saved-list {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+.search-box span {
+  color: #9ca3af;
+  font-size: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  color: #374151;
+  background: transparent;
+}
+
+.filter-list {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+  overflow-x: auto;
+}
+
+.filter-list button {
+  flex-shrink: 0;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #6b7280;
+  border-radius: 16px;
+  padding: 7px 12px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.filter-list button.active {
+  background: #971b35;
+  color: #ffffff;
+  border-color: #971b35;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.book-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.book-cover {
+  width: 48px;
+  height: 68px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 5px;
+  background: #f3f4f6;
+}
+
+.book-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-info h3 {
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0 0 4px;
+  color: #252525;
+  font-weight: 700;
+}
+
+.author {
+  color: #6b7280;
+  font-size: 9px;
+  line-height: 1.4;
+  margin: 0 0 3px;
+}
+
+.book-details {
+  color: #9ca3af;
+  font-size: 9px;
+  margin: 0 0 6px;
+}
+
+.status {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 4px 7px;
+  font-size: 9px;
+}
+
+.status.available {
+  background: #e7f8ef;
+  color: #16804a;
+}
+
+.status.borrowed {
+  background: #ffe9ed;
+  color: #b4233d;
+}
+
+.favorite-button {
+  border: none;
+  background: transparent;
+  color: #971b35;
+  font-size: 19px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-top: 1px solid #f1f1f1;
+  margin-top: 9px;
+  padding-top: 8px;
+  color: #666666;
+  font-size: 9px;
+}
+
+.reservation-timer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 9px;
+  background: #fff5e5;
+  border: 1px solid #ffe0a3;
+  border-radius: 8px;
+  color: #925d00;
+  font-size: 10px;
+}
+
+.reservation-timer p {
+  margin: 3px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.book-actions {
+  display: flex;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.book-actions button {
+  flex: 1;
+  min-width: 0;
+  border-radius: 8px;
+  padding: 9px 5px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reserve-button {
+  color: #ffffff;
+  background: #971b35;
+  border: 1px solid #971b35;
+}
+
+.reserve-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reserve-button.reserved {
+  background: #f8e9ed;
+  color: #971b35;
+}
+
+.map-button {
+  color: #4b5563;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 25px 12px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+@media (min-width: 600px) {
+  .saved-list {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
