@@ -1,18 +1,13 @@
-
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { SharedBackButton } from '../../../common_component/shared-back-button/shared-back-button';
 
 @Component({
   selector: 'app-my-past-header',
   standalone: true,
-  imports: [],
+  imports: [SharedBackButton],
   templateUrl: './my-past-header.html',
   styleUrl: './my-past-header.css',
 })
 export class MyPastHeader {
-  constructor(private router: Router) {}
 
-  goBack(): void {
-  this.router.navigateByUrl('/profile');
- }
 }

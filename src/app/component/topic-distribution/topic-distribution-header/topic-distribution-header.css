@@ -12,38 +12,11 @@
   box-sizing: border-box;
 }
 
-/* Geri butonu */
-.back-button {
-  position: absolute;
-  left: 18px;
-
-  width: 32px;
-  height: 32px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-  background: transparent;
-
-  font-size: 24px;
-  font-weight: 400;
-
-  color: #333;
-
-  cursor: pointer;
-  padding: 0;
-}
-
 /* Başlık */
 .header-title {
   margin: 0;
-
   font-size: 16px;
   font-weight: 600;
-
   color: #202124;
-
   line-height: 1;
 }

@@ -1,18 +1,12 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { SharedBackButton } from '../../../common_component/shared-back-button/shared-back-button';
 
 @Component({
   selector: 'app-catalog-header',
-  imports: [],
+  imports: [SharedBackButton],
   templateUrl: './catalog-header.html',
   styleUrl: './catalog-header.css',
 })
 export class CatalogHeader {
-  constructor(private router:Router){}
 
-  geriDon(){
-     this.router.navigate(['/']);
-  }
-  }
-
-
+}
