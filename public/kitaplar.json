@@ -32,7 +32,7 @@
     "raftaMi": false,
     "fakulte": "İktisadi ve İdari Bilimler Fakültesi",
     "kitapFoto": "images/1984.jpg",
-    "tur": "Tez",
+    "tur": "E-Kitap",
     "eklenmeTarihi": "2026-10-08",
     "aciklama": "Bireylerin sürekli gözetim altında tutulduğu totaliter bir dünyada Winston Smith'in gerçekleri sorgulama çabasını anlatır. Özgürlük, propaganda, düşünce kontrolü ve iktidarın sınırları üzerine düşündürür."
   },
@@ -176,7 +176,7 @@
     "raftaMi": false,
     "fakulte": "Fen Edebiyat Fakültesi",
     "kitapFoto": "images/yabanci.jpg",
-    "tur": "Tez",
+    "tur": "Kitap",
     "eklenmeTarihi": "2026-10-08",
     "aciklama": "Meursault adlı karakterin yaşadıkları üzerinden toplumun ahlak anlayışını ve insanın dünyadaki yerini sorgular. Yabancılaşma, kayıtsızlık, özgürlük ve hayatın anlamı gibi varoluşçu temaları işler."
   },

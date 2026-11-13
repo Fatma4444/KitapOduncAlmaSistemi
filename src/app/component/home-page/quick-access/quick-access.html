@@ -1,85 +1,97 @@
-<div class="quick-access">
+<section class="qa">
+  <div class="qa-head">
+    <h3 class="qa-title">Hızlı Erişim</h3>
+    <span class="qa-all">Tümünü Gör ›</span>
+  </div>
 
-    <div class="quick-access-title">
-        <h3>Hızlı Erişim</h3>
+  <div class="qa-row">
+    <button type="button" class="qa-card qa-red" (click)="quickAccess()">
+      <span class="qa-icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="3" width="18" height="18" rx="4" />
+          <circle cx="8.5" cy="8.5" r="1.5" />
+          <path d="M21 15l-5-5L5 21" />
+        </svg>
+      </span>
+      <span class="qa-label">Yeni Gelenler</span>
+    </button>
 
-        
-    </div>
+    <button type="button" class="qa-card qa-wine" (click)="quickAccess2()">
+      <span class="qa-icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"
+          />
+        </svg>
+      </span>
+      <span class="qa-label">Popüler Kitaplar</span>
+    </button>
 
+    <button type="button" class="qa-card qa-gold" (click)="quickAccess3()">
+      <span class="qa-icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polygon
+            points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6 12 2"
+          />
+        </svg>
+      </span>
+      <span class="qa-label">Favoriler</span>
+    </button>
 
-    <div class="quick-access-items">
+    <button type="button" class="qa-card qa-blue" (click)="quickAccess4()">
+      <span class="qa-icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="6" y1="20" x2="6" y2="12" />
+          <line x1="12" y1="20" x2="12" y2="4" />
+          <line x1="18" y1="20" x2="18" y2="9" />
+        </svg>
+      </span>
+      <span class="qa-label">İstatistikler</span>
+    </button>
 
-        <div class="quick-access-new" (click)="quickAccess()">
-
-            <div class="quick-access-new-icon">
-                🖼️
-            </div>
-
-            <span>
-                Yeni<br>
-                Gelenler
-            </span>
-
-        </div>
-
-
-        <div class="quick-acces-popular" (click)="quickAccess2()">
-
-            <div class="quick-access-popular-icon">
-                ❤️
-            </div>
-
-            <span>
-                Popüler<br>
-                Kitaplar
-            </span>
-
-        </div>
-
-
-        <div class="quick-access-suggestions" (click)="quickAccess3()">
-
-            <div class="quick-access-suggestions-icon">
-                ⭐
-            </div>
-
-            <span>
-                Favoriler
-            </span>
-
-        </div>
-
-        
-        <div class="quick-access-statistics" (click)="quickAccess4()">
-
-        <div class="quick-access-statistics-icon">
-            📊
-        </div>
-
-        <span>
-            Kütüphane<br>
-            İstatistikleri
-        </span>
-
-       </div>
-
-
-         
-        <div class="quick-access-topic" (click)="quickAccess5()">
-
-        <div class="quick-access-topic-icon">
-            📚
-        </div>
-
-        <span>
-            Konu<br>
-            Dağılımı
-        </span>
-
-        </div>
-
-
-
-    </div>
-
-</div>
+    <button type="button" class="qa-card qa-green" (click)="quickAccess5()">
+      <span class="qa-icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21.2 15.9A10 10 0 1 1 8 2.8" />
+          <path d="M22 12A10 10 0 0 0 12 2v10z" />
+        </svg>
+      </span>
+      <span class="qa-label">Konu Dağılımı</span>
+    </button>
+  </div>
+</section>
