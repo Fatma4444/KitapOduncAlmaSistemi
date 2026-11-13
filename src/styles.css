@@ -1,13 +1,20 @@
-
 html,
 body {
   width: 100%;
   min-height: 100%;
   margin: 0;
   background-color: #f5f6fa;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
   min-height: 100vh;
+  height: auto !important;
 }
 
+app-root {
+  display: block;
+  min-height: 100vh;
+  height: auto;
+}

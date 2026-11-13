@@ -1,91 +1,113 @@
-
-.quick-access {
-    width: calc(100% - 24px);
-    margin: 18px auto 0;
+.qa {
+    display: block;
+    width: 100%;
+    margin: 20px 0 0;
     box-sizing: border-box;
 }
 
-/* Başlık kısmı */
-.quick-access-title {
+.qa-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    padding: 0 12px;
+    margin-bottom: 12px;
 }
 
-.quick-access-title h3 {
+.qa-title {
     margin: 0;
-    font-size: 13px;
+    font-size: 17px;
     font-weight: 700;
-    color: #222;
+    color: #1f1f2b;
 }
 
-.quick-access-title span {
-    font-size: 8px;
-    color: #777;
+.qa-all {
+    font-size: 12px;
+    font-weight: 600;
+    color: #8f1025;
     cursor: pointer;
 }
 
-/* Kartların bulunduğu alan */
-.quick-access-items {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-}
-
-/* Kartların ortak özellikleri */
-.quick-access-new,
-.quick-acces-popular,
-.quick-access-suggestions,
-.quick-access-statistics,
-.quick-access-topic {
-    width: 100%;
-    min-width: 0;
-    height: 50px;
-    background-color: white;
-    border: 1px solid #eeeeee;
-    border-radius: 9px;
+/* Tek satır: 5 kart satırı eşit paylaşır */
+.qa-row {
     display: flex;
-    align-items: center;
-    padding: 0 5px;
+    flex-wrap: nowrap;
+    gap: 8px;                    /* kartlar arası eşit boşluk */
+
+    width: 100%;
+    padding: 4px 12px 18px;      /* sol ve sağ kenar boşluğu eşit */
     box-sizing: border-box;
-    gap: 4px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    height: auto;
+    overflow: visible;
 }
 
-/* İkonlar */
-.quick-access-new-icon,
-.quick-access-popular-icon,
-.quick-access-suggestions-icon,
-.quick-access-statistics-icon,
-.quick-access-topic-icon {
-    width: 24px;
-    height: 27px;
-    border-radius: 6px;
+/* Kart: genişlik otomatik eşit bölünür */
+.qa-card {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    height: 96px;
+    padding: 12px 2px 8px;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+
+    box-sizing: border-box;
+    background: #ffffff;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(40, 40, 80, 0.08);
+
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.18s ease;
+}
+
+.qa-card:active {
+    transform: scale(0.95);
+}
+
+/* İkon kutusu */
+.qa-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
-    flex-shrink: 0;
+
+    color: #ffffff;
+    border-radius: 12px;
 }
 
-/* İkon arka planları */
-.quick-access-new-icon,
-.quick-access-popular-icon,
-.quick-access-suggestions-icon,
-.quick-access-statistics-icon,
-.quick-access-topic-icon {
-    background-color: #ffffff;
+.qa-icon svg {
+    width: 19px;
+    height: 19px;
+    display: block;
 }
 
-/* Kart yazıları */
-.quick-access-new span,
-.quick-acces-popular span,
-.quick-access-suggestions span,
-.quick-access-statistics span,
-.quick-access-topic span {
-    font-size: 10px;
-    line-height: 11px;
-    color: #040404;
+/* Yazı */
+.qa-label {
+    display: block;
+    width: 100%;
+    font-size: 9.5px;
+    font-weight: 600;
+    line-height: 12px;
+    text-align: center;
+    color: #2a2a35;
+    word-break: break-word;
 }
+
+/* Renkler */
+.qa-red .qa-icon   { background: linear-gradient(135deg, #ff7a8a, #d6264a); box-shadow: 0 4px 10px rgba(214, 38, 74, 0.3); }
+.qa-wine .qa-icon  { background: linear-gradient(135deg, #b5334d, #8f1025); box-shadow: 0 4px 10px rgba(143, 16, 37, 0.3); }
+.qa-gold .qa-icon  { background: linear-gradient(135deg, #ffc857, #f59e0b); box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3); }
+.qa-blue .qa-icon  { background: linear-gradient(135deg, #6aa8ff, #3b6fe0); box-shadow: 0 4px 10px rgba(59, 111, 224, 0.3); }
+.qa-green .qa-icon { background: linear-gradient(135deg, #4ed39a, #16a36b); box-shadow: 0 4px 10px rgba(22, 163, 107, 0.3); }

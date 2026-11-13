@@ -1,47 +1,68 @@
-
 <div class="banner">
-    <div class="picture">
+  <div class="picture">
+    <div class="bg-image"></div>
+    <div class="overlay"></div>
+    <div class="glow"></div>
 
-        <div class="digital-grid"></div>
+    <!-- Sayfaları dönen kitap -->
+    <div class="book-scene" aria-hidden="true">
+      <div class="book">
+        <div class="book-cover"></div>
 
-        <div class="writing">
-            <span class="welcome-tag">
-                <span class="status-dot"></span>
-                BİNGÖL ÜNİVERSİTESİ KÜTÜPHANESİ
-            </span>
+        <div class="paper left"></div>
+        <div class="paper right"></div>
 
-            <h2 class="hi">
-                Merhaba 👋
-                <br>
-                Kütüphaneye
-                <br>
-                Hoş Geldin
-            </h2>
-
-            <h5 class="fareword">
-                Bilgiye açılan kapı, geleceğine ışık tutar.
-            </h5>
-
-            <div class="banner-line"></div>
+        <div class="flip flip-1">
+          <div class="paper face front"></div>
+          <div class="paper face back"></div>
+        </div>
+        <div class="flip flip-2">
+          <div class="paper face front"></div>
+          <div class="paper face back"></div>
+        </div>
+        <div class="flip flip-3">
+          <div class="paper face front"></div>
+          <div class="paper face back"></div>
         </div>
 
-        <div class="scan-line"></div>
+        <div class="spine"></div>
+      </div>
     </div>
 
-    <div class="search">
-        <span class="search-icon">⌕</span>
+    <div class="writing">
+      <span class="welcome-tag">
+        <span class="status-dot"></span>
+        BİNGÖL ÜNİVERSİTESİ KÜTÜPHANESİ
+      </span>
 
-        <input
-            type="text"
-            placeholder="Kitap, yazar, konu ara..."
-            (keyup.enter)="searchBooks()"
-        >
+      <h2 class="hi">
+        <span class="hi-line">
+          <span class="type t1">Kütüphaneye</span>
+        </span>
+        <span class="hi-line">
+          <span class="type t2 shine">Hoş Geldin</span>
+        </span>
+      </h2>
 
-        <button
-            class="search-button"
-            type="button"
-            (click)="searchBooks()">
-            🔍
-        </button>
+      <div class="accent-bar"></div>
+
+      <p class="fareword">
+        <span class="type t3">Bilgiye açılan kapı, geleceğine ışık tutar.</span
+        ><span class="caret"></span>
+      </p>
     </div>
+  </div>
+
+  <div class="search">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+      <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
+
+    <input type="text" placeholder="Kitap, yazar, konu ara..." (keyup.enter)="searchBooks()" />
+
+    <button class="search-button" type="button" aria-label="Ara" (click)="searchBooks()">
+      Ara
+    </button>
+  </div>
 </div>
